@@ -1,0 +1,6 @@
+framework module Pods_UniqloApp {
+  umbrella header "Pods-UniqloApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
