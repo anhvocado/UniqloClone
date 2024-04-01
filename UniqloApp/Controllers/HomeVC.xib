@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TT Commons DemiBold.otf">
+            <string>TTCommons-DemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="UniqloApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sq4-mX-4nN">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aT-Fy-XXh">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="2000"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yFP-Bs-hCj">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="393"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="393" id="l4g-vO-gOD"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rDf-uW-kXX">
+                                    <rect key="frame" x="16" y="409" width="377" height="200"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Áo Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBY-pq-jyi">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="22"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sxx-Qf-0Iq">
+                                            <rect key="frame" x="0.0" y="30" width="377" height="170"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="h7b-FA-1ke">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="5tY-RC-MKy"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1BQ-c9-63X">
+                                    <rect key="frame" x="16" y="639" width="377" height="200"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Áo Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-ky-zex">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="22"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="K0e-dp-lCN">
+                                            <rect key="frame" x="0.0" y="30" width="377" height="170"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7H-IH-JKe">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="ehT-zf-myP"/>
+                                    </constraints>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vHh-6T-bxd">
+                                    <rect key="frame" x="16" y="869" width="377" height="200"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Áo Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbg-mu-gz3">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="22"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="zGb-Bq-NR6">
+                                            <rect key="frame" x="0.0" y="30" width="377" height="170"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="83E-kQ-Tn8">
+                                                <size key="itemSize" width="128" height="128"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="8Bh-uw-gsO"/>
+                                        <constraint firstAttribute="height" constant="200" id="mUl-Zf-X49"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="yFP-Bs-hCj" secondAttribute="trailing" id="HdS-ee-o9L"/>
+                                <constraint firstItem="yFP-Bs-hCj" firstAttribute="top" secondItem="1aT-Fy-XXh" secondAttribute="top" id="HgQ-iz-ig0"/>
+                                <constraint firstAttribute="height" constant="2000" id="Hwp-Hi-aaJ"/>
+                                <constraint firstAttribute="trailing" secondItem="vHh-6T-bxd" secondAttribute="trailing" id="Im7-L7-gXR"/>
+                                <constraint firstItem="rDf-uW-kXX" firstAttribute="top" secondItem="yFP-Bs-hCj" secondAttribute="bottom" constant="16" id="Ivu-5i-CEI"/>
+                                <constraint firstItem="1BQ-c9-63X" firstAttribute="leading" secondItem="1aT-Fy-XXh" secondAttribute="leading" constant="16" id="Tvj-oQ-YQX"/>
+                                <constraint firstItem="vHh-6T-bxd" firstAttribute="leading" secondItem="1aT-Fy-XXh" secondAttribute="leading" constant="16" id="Var-qn-SY3"/>
+                                <constraint firstItem="1BQ-c9-63X" firstAttribute="top" secondItem="rDf-uW-kXX" secondAttribute="bottom" constant="30" id="fOd-tv-Vps"/>
+                                <constraint firstItem="yFP-Bs-hCj" firstAttribute="leading" secondItem="1aT-Fy-XXh" secondAttribute="leading" id="hy6-7c-dv2"/>
+                                <constraint firstAttribute="trailing" secondItem="rDf-uW-kXX" secondAttribute="trailing" id="izs-y5-FfQ"/>
+                                <constraint firstAttribute="trailing" secondItem="1BQ-c9-63X" secondAttribute="trailing" id="jfl-xf-Njv"/>
+                                <constraint firstItem="rDf-uW-kXX" firstAttribute="leading" secondItem="1aT-Fy-XXh" secondAttribute="leading" constant="16" id="rGn-OA-XoU"/>
+                                <constraint firstItem="vHh-6T-bxd" firstAttribute="top" secondItem="1BQ-c9-63X" secondAttribute="bottom" constant="30" id="tkm-xF-bd4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1aT-Fy-XXh" secondAttribute="bottom" id="8i6-7Z-7mi"/>
+                        <constraint firstItem="1aT-Fy-XXh" firstAttribute="leading" secondItem="sq4-mX-4nN" secondAttribute="leading" id="BrR-d5-0W3"/>
+                        <constraint firstItem="1aT-Fy-XXh" firstAttribute="top" secondItem="sq4-mX-4nN" secondAttribute="top" id="RIE-Hu-7IS"/>
+                        <constraint firstAttribute="trailing" secondItem="1aT-Fy-XXh" secondAttribute="trailing" id="ZLX-j6-6ab"/>
+                        <constraint firstItem="1aT-Fy-XXh" firstAttribute="width" secondItem="sq4-mX-4nN" secondAttribute="width" id="dJD-Lg-NPA"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sq4-mX-4nN" secondAttribute="bottom" id="L6q-90-Hgj"/>
+                <constraint firstItem="sq4-mX-4nN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TOd-rg-aiL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sq4-mX-4nN" secondAttribute="trailing" id="iNU-3S-8BE"/>
+                <constraint firstItem="sq4-mX-4nN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="prC-SB-05T"/>
+            </constraints>
+            <point key="canvasLocation" x="5.343511450381679" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

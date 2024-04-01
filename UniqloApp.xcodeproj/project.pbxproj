@@ -50,6 +50,20 @@
 		17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */; };
 		17FC49FC2BB13A1600A84FCE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */; };
 		17FC49FD2BB13A1600A84FCE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */; };
+		670221162BB2B468008CFF8E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221142BB2B468008CFF8E /* MainVC.swift */; };
+		670221172BB2B468008CFF8E /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670221152BB2B468008CFF8E /* MainVC.xib */; };
+		6702211A2BB2BAD9008CFF8E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221182BB2BAD9008CFF8E /* ProfileVC.swift */; };
+		6702211B2BB2BAD9008CFF8E /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670221192BB2BAD9008CFF8E /* ProfileVC.xib */; };
+		6702211E2BB2BAEF008CFF8E /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6702211C2BB2BAEF008CFF8E /* CartVC.swift */; };
+		6702211F2BB2BAEF008CFF8E /* CartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6702211D2BB2BAEF008CFF8E /* CartVC.xib */; };
+		670221222BB2BBB5008CFF8E /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221202BB2BBB5008CFF8E /* HomeVC.swift */; };
+		670221232BB2BBB5008CFF8E /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670221212BB2BBB5008CFF8E /* HomeVC.xib */; };
+		670221272BB2CB42008CFF8E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221252BB2CB42008CFF8E /* ItemCell.swift */; };
+		670221282BB2CB42008CFF8E /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670221262BB2CB42008CFF8E /* ItemCell.xib */; };
+		67FCD6482BB156320080DA2B /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FCD6462BB156320080DA2B /* RegisterVC.swift */; };
+		67FCD6492BB156320080DA2B /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FCD6472BB156320080DA2B /* RegisterVC.xib */; };
+		67FCD64C2BB1577C0080DA2B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FCD64A2BB1577C0080DA2B /* LoginVC.swift */; };
+		67FCD64D2BB1577C0080DA2B /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FCD64B2BB1577C0080DA2B /* LoginVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +112,38 @@
 		17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		670221142BB2B468008CFF8E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		670221152BB2B468008CFF8E /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		670221182BB2BAD9008CFF8E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		670221192BB2BAD9008CFF8E /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		6702211C2BB2BAEF008CFF8E /* CartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
+		6702211D2BB2BAEF008CFF8E /* CartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartVC.xib; sourceTree = "<group>"; };
+		670221202BB2BBB5008CFF8E /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		670221212BB2BBB5008CFF8E /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		670221252BB2CB42008CFF8E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		670221262BB2CB42008CFF8E /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		672AAD1D2BB155D500391789 /* TT Commons Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Black.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Black.otf"; sourceTree = "<group>"; };
+		672AAD1E2BB155D500391789 /* TT Commons Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Italic.otf"; sourceTree = "<group>"; };
+		672AAD1F2BB155D500391789 /* TT Commons Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Medium.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Medium.otf"; sourceTree = "<group>"; };
+		672AAD202BB155D500391789 /* TT Commons ExtraLight Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons ExtraLight Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons ExtraLight Italic.otf"; sourceTree = "<group>"; };
+		672AAD212BB155D500391789 /* TT Commons DemiBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons DemiBold Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons DemiBold Italic.otf"; sourceTree = "<group>"; };
+		672AAD222BB155D500391789 /* TT Commons Black Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Black Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Black Italic.otf"; sourceTree = "<group>"; };
+		672AAD232BB155D500391789 /* TT Commons ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons ExtraLight.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons ExtraLight.otf"; sourceTree = "<group>"; };
+		672AAD242BB155D500391789 /* TT Commons Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Medium Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Medium Italic.otf"; sourceTree = "<group>"; };
+		672AAD252BB155D500391789 /* TT Commons Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Regular.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Regular.otf"; sourceTree = "<group>"; };
+		672AAD262BB155D500391789 /* TT Commons ExtraBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons ExtraBold Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons ExtraBold Italic.otf"; sourceTree = "<group>"; };
+		672AAD272BB155D500391789 /* TT Commons DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons DemiBold.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons DemiBold.otf"; sourceTree = "<group>"; };
+		672AAD282BB155D500391789 /* TT Commons Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Light.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Light.otf"; sourceTree = "<group>"; };
+		672AAD292BB155D500391789 /* TT Commons Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Light Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Light Italic.otf"; sourceTree = "<group>"; };
+		672AAD2A2BB155D500391789 /* TT Commons Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Bold Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Bold Italic.otf"; sourceTree = "<group>"; };
+		672AAD2B2BB155D500391789 /* TT Commons Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Thin.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Thin.otf"; sourceTree = "<group>"; };
+		672AAD2C2BB155D500391789 /* TT Commons ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons ExtraBold.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons ExtraBold.otf"; sourceTree = "<group>"; };
+		672AAD2D2BB155D500391789 /* TT Commons Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Bold.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Bold.otf"; sourceTree = "<group>"; };
+		672AAD2E2BB155D500391789 /* TT Commons Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "TT Commons Thin Italic.otf"; path = "../../../tt-commons-cdnfonts 2/TT Commons Thin Italic.otf"; sourceTree = "<group>"; };
+		67FCD6462BB156320080DA2B /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		67FCD6472BB156320080DA2B /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
+		67FCD64A2BB1577C0080DA2B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		67FCD64B2BB1577C0080DA2B /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		A884C74DF92FE684286DE28B /* Pods_UniqloApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UniqloApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E81EC8F46EC225F790F328 /* Pods-UniqloApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniqloApp.release.xcconfig"; path = "Target Support Files/Pods-UniqloApp/Pods-UniqloApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,9 +181,9 @@
 		17FC49932BB135B400A84FCE /* UniqloApp */ = {
 			isa = PBXGroup;
 			children = (
+				67FCD6452BB156210080DA2B /* Controllers */,
+				672AAD1C2BB155C600391789 /* Fonts */,
 				17FC49D72BB139E500A84FCE /* Extensions */,
-				17FC49D62BB139DF00A84FCE /* Controllers */,
-				17FC49D52BB139DB00A84FCE /* Models */,
 				17FC49D42BB139B700A84FCE /* Application */,
 				17FC49CE2BB138A400A84FCE /* Views */,
 				17FC49A22BB135B600A84FCE /* Info.plist */,
@@ -254,20 +300,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		17FC49D52BB139DB00A84FCE /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		17FC49D62BB139DF00A84FCE /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		17FC49D72BB139E500A84FCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +333,60 @@
 				C1E81EC8F46EC225F790F328 /* Pods-UniqloApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		670221242BB2CB1E008CFF8E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				670221252BB2CB42008CFF8E /* ItemCell.swift */,
+				670221262BB2CB42008CFF8E /* ItemCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		672AAD1C2BB155C600391789 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				672AAD222BB155D500391789 /* TT Commons Black Italic.otf */,
+				672AAD1D2BB155D500391789 /* TT Commons Black.otf */,
+				672AAD2A2BB155D500391789 /* TT Commons Bold Italic.otf */,
+				672AAD2D2BB155D500391789 /* TT Commons Bold.otf */,
+				672AAD212BB155D500391789 /* TT Commons DemiBold Italic.otf */,
+				672AAD272BB155D500391789 /* TT Commons DemiBold.otf */,
+				672AAD262BB155D500391789 /* TT Commons ExtraBold Italic.otf */,
+				672AAD2C2BB155D500391789 /* TT Commons ExtraBold.otf */,
+				672AAD202BB155D500391789 /* TT Commons ExtraLight Italic.otf */,
+				672AAD232BB155D500391789 /* TT Commons ExtraLight.otf */,
+				672AAD1E2BB155D500391789 /* TT Commons Italic.otf */,
+				672AAD292BB155D500391789 /* TT Commons Light Italic.otf */,
+				672AAD282BB155D500391789 /* TT Commons Light.otf */,
+				672AAD242BB155D500391789 /* TT Commons Medium Italic.otf */,
+				672AAD1F2BB155D500391789 /* TT Commons Medium.otf */,
+				672AAD252BB155D500391789 /* TT Commons Regular.otf */,
+				672AAD2E2BB155D500391789 /* TT Commons Thin Italic.otf */,
+				672AAD2B2BB155D500391789 /* TT Commons Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		67FCD6452BB156210080DA2B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				670221242BB2CB1E008CFF8E /* Cells */,
+				67FCD6462BB156320080DA2B /* RegisterVC.swift */,
+				67FCD6472BB156320080DA2B /* RegisterVC.xib */,
+				67FCD64A2BB1577C0080DA2B /* LoginVC.swift */,
+				67FCD64B2BB1577C0080DA2B /* LoginVC.xib */,
+				670221142BB2B468008CFF8E /* MainVC.swift */,
+				670221152BB2B468008CFF8E /* MainVC.xib */,
+				670221182BB2BAD9008CFF8E /* ProfileVC.swift */,
+				670221192BB2BAD9008CFF8E /* ProfileVC.xib */,
+				6702211C2BB2BAEF008CFF8E /* CartVC.swift */,
+				6702211D2BB2BAEF008CFF8E /* CartVC.xib */,
+				670221202BB2BBB5008CFF8E /* HomeVC.swift */,
+				670221212BB2BBB5008CFF8E /* HomeVC.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F32C865B8C5D498A44A03AA3 /* Frameworks */ = {
@@ -371,10 +457,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6702211B2BB2BAD9008CFF8E /* ProfileVC.xib in Resources */,
+				6702211F2BB2BAEF008CFF8E /* CartVC.xib in Resources */,
+				67FCD64D2BB1577C0080DA2B /* LoginVC.xib in Resources */,
 				17FC49A12BB135B600A84FCE /* LaunchScreen.storyboard in Resources */,
+				670221282BB2CB42008CFF8E /* ItemCell.xib in Resources */,
 				17FC499E2BB135B600A84FCE /* Assets.xcassets in Resources */,
 				17FC499C2BB135B400A84FCE /* Main.storyboard in Resources */,
 				17FC49D32BB138C200A84FCE /* LoadingIndicatorView.xib in Resources */,
+				670221232BB2BBB5008CFF8E /* HomeVC.xib in Resources */,
+				67FCD6492BB156320080DA2B /* RegisterVC.xib in Resources */,
+				670221172BB2B468008CFF8E /* MainVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6702211E2BB2BAEF008CFF8E /* CartVC.swift in Sources */,
 				17FC49CD2BB137C000A84FCE /* APIUIIndicator.swift in Sources */,
 				17FC49D22BB138C200A84FCE /* LoadingIndicatorView.swift in Sources */,
 				17FC49F32BB13A1600A84FCE /* UIImageView+Extension.swift in Sources */,
@@ -435,14 +529,17 @@
 				17FC49F92BB13A1600A84FCE /* UIViewController+Extension.swift in Sources */,
 				17FC49B92BB137A400A84FCE /* APIResponse.swift in Sources */,
 				17FC49ED2BB13A1600A84FCE /* Bundle+Extension.swift in Sources */,
+				670221222BB2BBB5008CFF8E /* HomeVC.swift in Sources */,
 				17FC49F52BB13A1600A84FCE /* UICollectionView+Extension.swift in Sources */,
 				17FC49EC2BB13A1600A84FCE /* Int+Extension.swift in Sources */,
 				17FC49F12BB13A1600A84FCE /* String+Extension.swift in Sources */,
 				17FC49C82BB137B900A84FCE /* APIProcessingManager.swift in Sources */,
+				67FCD6482BB156320080DA2B /* RegisterVC.swift in Sources */,
 				17FC49BE2BB137AB00A84FCE /* APIDispatcherProtocol.swift in Sources */,
 				17FC49C92BB137B900A84FCE /* APIUtilities.swift in Sources */,
 				17FC49F02BB13A1600A84FCE /* UIColor+Extension.swift in Sources */,
 				17FC49B22BB1379C00A84FCE /* APIOperation.swift in Sources */,
+				670221162BB2B468008CFF8E /* MainVC.swift in Sources */,
 				17FC49B32BB1379C00A84FCE /* APIOperationProtocol.swift in Sources */,
 				17FC49BA2BB137A400A84FCE /* APIConfiguration.swift in Sources */,
 				17FC49C22BB137B200A84FCE /* APIEnviromentProtocol.swift in Sources */,
@@ -452,14 +549,17 @@
 				17FC49F72BB13A1600A84FCE /* UIView+Extension.swift in Sources */,
 				17FC49C72BB137B900A84FCE /* APIExtension.swift in Sources */,
 				17FC49BF2BB137AB00A84FCE /* APIDispatcher.swift in Sources */,
+				670221272BB2CB42008CFF8E /* ItemCell.swift in Sources */,
 				17FC49EB2BB13A1600A84FCE /* URL+Extension.swift in Sources */,
 				17FC49992BB135B400A84FCE /* ViewController.swift in Sources */,
 				17FC49F42BB13A1600A84FCE /* UICollectionReusableView+Extension.swift in Sources */,
+				6702211A2BB2BAD9008CFF8E /* ProfileVC.swift in Sources */,
 				17FC49C32BB137B200A84FCE /* APIMainEnviroment.swift in Sources */,
 				17FC49F22BB13A1600A84FCE /* UIImage+Extension.swift in Sources */,
 				17FC49F82BB13A1600A84FCE /* Date+Extension .swift in Sources */,
 				17FC49952BB135B400A84FCE /* AppDelegate.swift in Sources */,
 				17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */,
+				67FCD64C2BB1577C0080DA2B /* LoginVC.swift in Sources */,
 				17FC49B82BB137A400A84FCE /* APIRequest.swift in Sources */,
 				17FC49972BB135B400A84FCE /* SceneDelegate.swift in Sources */,
 				17FC49F62BB13A1600A84FCE /* UILabel+Extension.swift in Sources */,
