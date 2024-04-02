@@ -34,7 +34,7 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNJ-6a-nF5">
-                    <rect key="frame" x="20" y="405" width="350" height="53"/>
+                    <rect key="frame" x="20" y="405" width="353" height="53"/>
                     <color key="backgroundColor" systemColor="labelColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="53" id="4oh-Yf-Kmm"/>
@@ -44,51 +44,46 @@
                     <state key="normal" title="CREATE AN ACCOUNT"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE AN ACCOUNT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T79-IY-aPF">
-                    <rect key="frame" x="20" y="183" width="204.33333333333331" height="22"/>
+                    <rect key="frame" x="20" y="183" width="204.33333333333334" height="22"/>
                     <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="tPL-wl-45L">
-                    <rect key="frame" x="20" y="225" width="350" height="160"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="tPL-wl-45L">
+                    <rect key="frame" x="20" y="225" width="353" height="160"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z44-tA-w5e">
-                            <rect key="frame" x="0.0" y="0.0" width="95" height="14"/>
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="14"/>
                             <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a valid email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xtc-vh-frT">
-                            <rect key="frame" x="0.0" y="28" width="350" height="45"/>
+                            <rect key="frame" x="0.0" y="28" width="353" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="350" id="WIY-cL-S7v"/>
                                 <constraint firstAttribute="height" constant="45" id="hDj-4p-t7C"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXO-ZM-0e1">
-                            <rect key="frame" x="0.0" y="87" width="66.666666666666671" height="14"/>
+                            <rect key="frame" x="0.0" y="87" width="353" height="14"/>
                             <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-eS-G6r">
-                            <rect key="frame" x="0.0" y="115" width="350" height="45"/>
+                            <rect key="frame" x="0.0" y="115" width="353" height="45"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="350" id="jBI-Ur-v7x"/>
                                 <constraint firstAttribute="height" constant="45" id="jNU-ai-UIn"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="350" id="gpD-9r-Ygs"/>
-                    </constraints>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE AN ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLc-jN-Go2">
-                    <rect key="frame" x="116" y="65.666666666666671" width="158" height="17"/>
+                    <rect key="frame" x="117.66666666666669" y="65.666666666666671" width="158" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="0Hu-c9-fq6"/>
                     </constraints>
@@ -97,7 +92,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73q-iv-xIW">
-                    <rect key="frame" x="340" y="59" width="30" height="30"/>
+                    <rect key="frame" x="343" y="59" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="3RU-gA-eOu"/>
                         <constraint firstAttribute="width" constant="30" id="OxK-It-B6l"/>
@@ -107,7 +102,7 @@
                     <buttonConfiguration key="configuration" style="plain"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYP-gM-cCS">
-                    <rect key="frame" x="325" y="180.66666666666666" width="45" height="27"/>
+                    <rect key="frame" x="328" y="180.66666666666666" width="45" height="27"/>
                     <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="15"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="LOG IN">

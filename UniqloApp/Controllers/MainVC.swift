@@ -16,19 +16,19 @@ import UIKit
 
 class MainVC: UIViewController, UITabBarControllerDelegate, MainTabbarShowHideDelegate {
     func showMainTabbar() {
-        <#code#>
+        
     }
     
     func hideMainTabbar() {
-        <#code#>
+        
     }
     
     func showMainTabbarView() {
-        <#code#>
+        
     }
     
     func hidenMainTabbarView() {
-        <#code#>
+        
     }
     
     
