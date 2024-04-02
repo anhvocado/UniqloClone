@@ -26,6 +26,12 @@
 		1759D9AB2BBC041600E4FE60 /* TT Commons Medium Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1759D9992BBC041600E4FE60 /* TT Commons Medium Italic.otf */; };
 		1759D9AC2BBC041600E4FE60 /* TT Commons DemiBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1759D99A2BBC041600E4FE60 /* TT Commons DemiBold Italic.otf */; };
 		1759D9AD2BBC041600E4FE60 /* TT Commons ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1759D99B2BBC041600E4FE60 /* TT Commons ExtraLight.otf */; };
+		1759D9B02BBC092800E4FE60 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759D9AE2BBC092800E4FE60 /* CategoryVC.swift */; };
+		1759D9B12BBC092800E4FE60 /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1759D9AF2BBC092800E4FE60 /* CategoryVC.xib */; };
+		1759D9B52BBC15FB00E4FE60 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759D9B32BBC15FB00E4FE60 /* CategoryCollectionViewCell.swift */; };
+		1759D9B62BBC15FB00E4FE60 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1759D9B42BBC15FB00E4FE60 /* CategoryCollectionViewCell.xib */; };
+		1759D9B92BBC165E00E4FE60 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1759D9B72BBC165E00E4FE60 /* CategoryCell.swift */; };
+		1759D9BA2BBC165E00E4FE60 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1759D9B82BBC165E00E4FE60 /* CategoryCell.xib */; };
 		17FC49952BB135B400A84FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49942BB135B400A84FCE /* AppDelegate.swift */; };
 		17FC499E2BB135B600A84FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FC499D2BB135B600A84FCE /* Assets.xcassets */; };
 		17FC49A12BB135B600A84FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FC499F2BB135B600A84FCE /* LaunchScreen.storyboard */; };
@@ -101,6 +107,12 @@
 		1759D9992BBC041600E4FE60 /* TT Commons Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons Medium Italic.otf"; sourceTree = "<group>"; };
 		1759D99A2BBC041600E4FE60 /* TT Commons DemiBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons DemiBold Italic.otf"; sourceTree = "<group>"; };
 		1759D99B2BBC041600E4FE60 /* TT Commons ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons ExtraLight.otf"; sourceTree = "<group>"; };
+		1759D9AE2BBC092800E4FE60 /* CategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		1759D9AF2BBC092800E4FE60 /* CategoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryVC.xib; sourceTree = "<group>"; };
+		1759D9B32BBC15FB00E4FE60 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		1759D9B42BBC15FB00E4FE60 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		1759D9B72BBC165E00E4FE60 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		1759D9B82BBC165E00E4FE60 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		17FC49912BB135B400A84FCE /* UniqloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniqloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FC49942BB135B400A84FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FC499D2BB135B600A84FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +207,19 @@
 				1759D98E2BBC041600E4FE60 /* TT Commons Thin.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1759D9B22BBC15E000E4FE60 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1759D9AF2BBC092800E4FE60 /* CategoryVC.xib */,
+				1759D9AE2BBC092800E4FE60 /* CategoryVC.swift */,
+				1759D9B32BBC15FB00E4FE60 /* CategoryCollectionViewCell.swift */,
+				1759D9B42BBC15FB00E4FE60 /* CategoryCollectionViewCell.xib */,
+				1759D9B72BBC165E00E4FE60 /* CategoryCell.swift */,
+				1759D9B82BBC165E00E4FE60 /* CategoryCell.xib */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		17FC49882BB135B400A84FCE = {
@@ -381,6 +406,7 @@
 		67FCD6452BB156210080DA2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1759D9B22BBC15E000E4FE60 /* Category */,
 				670221242BB2CB1E008CFF8E /* Cells */,
 				67FCD6462BB156320080DA2B /* RegisterVC.swift */,
 				67FCD6472BB156320080DA2B /* RegisterVC.xib */,
@@ -472,6 +498,7 @@
 				6702211F2BB2BAEF008CFF8E /* CartVC.xib in Resources */,
 				1759D9AD2BBC041600E4FE60 /* TT Commons ExtraLight.otf in Resources */,
 				67FCD64D2BB1577C0080DA2B /* LoginVC.xib in Resources */,
+				1759D9B62BBC15FB00E4FE60 /* CategoryCollectionViewCell.xib in Resources */,
 				1759D9AB2BBC041600E4FE60 /* TT Commons Medium Italic.otf in Resources */,
 				1759D9A92BBC041600E4FE60 /* TT Commons Black.otf in Resources */,
 				17FC49A12BB135B600A84FCE /* LaunchScreen.storyboard in Resources */,
@@ -479,6 +506,7 @@
 				1759D9A42BBC041600E4FE60 /* TT Commons ExtraLight Italic.otf in Resources */,
 				1759D9A22BBC041600E4FE60 /* TT Commons ExtraBold.otf in Resources */,
 				670221282BB2CB42008CFF8E /* ItemCell.xib in Resources */,
+				1759D9BA2BBC165E00E4FE60 /* CategoryCell.xib in Resources */,
 				17FC499E2BB135B600A84FCE /* Assets.xcassets in Resources */,
 				1759D9A32BBC041600E4FE60 /* TT Commons Light Italic.otf in Resources */,
 				1759D9A52BBC041600E4FE60 /* TT Commons Italic.otf in Resources */,
@@ -491,6 +519,7 @@
 				1759D99F2BBC041600E4FE60 /* TT Commons Light.otf in Resources */,
 				1759D9A82BBC041600E4FE60 /* TT Commons Bold.otf in Resources */,
 				1759D9AA2BBC041600E4FE60 /* TT Commons Bold Italic.otf in Resources */,
+				1759D9B12BBC092800E4FE60 /* CategoryVC.xib in Resources */,
 				670221172BB2B468008CFF8E /* MainVC.xib in Resources */,
 				1759D99C2BBC041600E4FE60 /* TT Commons DemiBold.otf in Resources */,
 				1759D9A72BBC041600E4FE60 /* TT Commons Regular.otf in Resources */,
@@ -569,6 +598,7 @@
 				17FC49B32BB1379C00A84FCE /* APIOperationProtocol.swift in Sources */,
 				17FC49BA2BB137A400A84FCE /* APIConfiguration.swift in Sources */,
 				17FC49C22BB137B200A84FCE /* APIEnviromentProtocol.swift in Sources */,
+				1759D9B92BBC165E00E4FE60 /* CategoryCell.swift in Sources */,
 				17FC49CC2BB137C000A84FCE /* APIUIAlert.swift in Sources */,
 				17FC49FA2BB13A1600A84FCE /* CGFloat+Extension.swift in Sources */,
 				17FC49FD2BB13A1600A84FCE /* UITableView+Extension.swift in Sources */,
@@ -577,6 +607,7 @@
 				17FC49BF2BB137AB00A84FCE /* APIDispatcher.swift in Sources */,
 				670221272BB2CB42008CFF8E /* ItemCell.swift in Sources */,
 				17FC49EB2BB13A1600A84FCE /* URL+Extension.swift in Sources */,
+				1759D9B52BBC15FB00E4FE60 /* CategoryCollectionViewCell.swift in Sources */,
 				17FC49F42BB13A1600A84FCE /* UICollectionReusableView+Extension.swift in Sources */,
 				6702211A2BB2BAD9008CFF8E /* ProfileVC.swift in Sources */,
 				17FC49C32BB137B200A84FCE /* APIMainEnviroment.swift in Sources */,
@@ -584,6 +615,7 @@
 				17FC49F82BB13A1600A84FCE /* Date+Extension .swift in Sources */,
 				17FC49952BB135B400A84FCE /* AppDelegate.swift in Sources */,
 				17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */,
+				1759D9B02BBC092800E4FE60 /* CategoryVC.swift in Sources */,
 				67FCD64C2BB1577C0080DA2B /* LoginVC.swift in Sources */,
 				17FC49B82BB137A400A84FCE /* APIRequest.swift in Sources */,
 				17FC49F62BB13A1600A84FCE /* UILabel+Extension.swift in Sources */,
