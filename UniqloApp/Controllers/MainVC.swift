@@ -10,43 +10,65 @@ import UIKit
 @objc protocol MainTabbarShowHideDelegate {
     func showMainTabbar()
     func hideMainTabbar()
-    func showMainTabbarView()
-    func hidenMainTabbarView()
 }
 
 class MainVC: UIViewController, UITabBarControllerDelegate, MainTabbarShowHideDelegate {
     func showMainTabbar() {
-        
+        tabbarViewController.tabBar.layer.zPosition = -1
+        tabbarViewController.tabBar.isHidden = true
+        tabbarViewController.tabBar.backgroundColor = .clear
+        self.view.bringSubviewToFront(viewTabbar)
     }
     
     func hideMainTabbar() {
-        
+        tabbarViewController.tabBar.layer.zPosition = -1
+        tabbarViewController.tabBar.isHidden = true
+        tabbarViewController.tabBar.backgroundColor = .clear
+        self.view.bringSubviewToFront(tabbarViewController.view)
     }
     
-    func showMainTabbarView() {
-        
-    }
-    
-    func hidenMainTabbarView() {
-        
-    }
-    
-    
+    @IBOutlet weak var ivHome: UIImageView!
+    @IBOutlet weak var ivCart: UIImageView!
+    @IBOutlet weak var ivProfile: UIImageView!
+    @IBOutlet weak var homeTitle: UILabel!
+    @IBOutlet weak var cartTitle: UILabel!
+    @IBOutlet weak var profileTitle: UILabel!
     @IBOutlet weak var viewTabbar: UIView!
     public var tabbarViewController: UITabBarController!
-    private var homeVC: HomeVC!
-    public var cartVC: CartVC!
-    public var profileVC: ProfileVC!
+    private var homeVC: CategoryVC!
+    private var cartVC: CartVC!
+    private var profileVC: ProfileVC!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        createTabbarView()
+        updateTabbarUI()
     }
     
-    /*
-     Create tabbar view controller
-     */
+    func updateTabbarUI() {
+        ivHome.tintColor = .lightGray
+        ivCart.tintColor = .lightGray
+        ivProfile.tintColor = .lightGray
+        homeTitle.textColor = .lightGray
+        cartTitle.textColor = .lightGray
+        profileTitle.textColor = .lightGray
+        
+        switch tabbarViewController.selectedIndex {
+        case 0:
+            ivHome.tintColor = .black
+            homeTitle.textColor = .black
+        case 1:
+            ivCart.tintColor = .black
+            cartTitle.textColor = .black
+        case 2:
+            ivProfile.tintColor = .black
+            profileTitle.textColor = .black
+        default:
+            break
+        }
+    }
+    
     private func createTabbarView() {
         tabbarViewController = UITabBarController()
         tabbarViewController.delegate = self
@@ -80,7 +102,7 @@ class MainVC: UIViewController, UITabBarControllerDelegate, MainTabbarShowHideDe
     }
     
     private func createTabbarItem() -> [UIViewController] {
-        homeVC = HomeVC.create()
+        homeVC = CategoryVC.create()
         cartVC = CartVC.create()
         profileVC = ProfileVC.create()
         
@@ -98,5 +120,23 @@ class MainVC: UIViewController, UITabBarControllerDelegate, MainTabbarShowHideDe
         profileVC.delegate = self
 
         return [homeNav, cartNav, profileNav]
+    }
+    
+    @IBAction func homeTabDidSelect(_ sender: Any) {
+        tabbarViewController.selectedIndex = 0
+        updateTabbarUI()
+        homeVC.popToRoot()
+    }
+    
+    @IBAction func cartTabDidSelect(_ sender: Any) {
+        tabbarViewController.selectedIndex = 1
+        updateTabbarUI()
+        cartVC.popToRoot()
+    }
+    
+    @IBAction func profileTabDidSelect(_ sender: Any) {
+        tabbarViewController.selectedIndex = 2
+        updateTabbarUI()
+        profileVC.popToRoot()
     }
 }

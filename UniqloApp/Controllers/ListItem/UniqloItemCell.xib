@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TT Commons Bold.otf">
+            <string>TTCommons-Bold</string>
+        </array>
+        <array key="TT Commons DemiBold.otf">
+            <string>TTCommons-DemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UniqloItemCell" id="gTV-IL-0wX" customClass="UniqloItemCell" customModule="UniqloApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="214" height="296"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="214" height="296"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vanh_model_1" translatesAutoresizingMaskIntoConstraints="NO" id="T1a-6j-Wkf">
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="214"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="T1a-6j-Wkf" secondAttribute="height" multiplier="1:1" id="Pi0-mU-M29"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOUBLE BREASTED JACKET (SET UP)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJm-9V-bLx">
+                        <rect key="frame" x="10" y="219" width="194" height="30"/>
+                        <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.479.000 VND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-a7-916">
+                        <rect key="frame" x="10" y="257" width="194" height="19"/>
+                        <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="T1a-6j-Wkf" secondAttribute="trailing" id="0LG-kI-u05"/>
+                <constraint firstItem="T1a-6j-Wkf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8z5-bs-tz4"/>
+                <constraint firstItem="5sf-a7-916" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Hsr-Pm-oI4"/>
+                <constraint firstAttribute="trailing" secondItem="5sf-a7-916" secondAttribute="trailing" constant="10" id="PER-gU-fQ8"/>
+                <constraint firstItem="nJm-9V-bLx" firstAttribute="top" secondItem="T1a-6j-Wkf" secondAttribute="bottom" constant="5" id="Q4g-1j-KAi"/>
+                <constraint firstItem="T1a-6j-Wkf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SX5-Rw-j2H"/>
+                <constraint firstItem="nJm-9V-bLx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="W4U-nj-WDf"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5sf-a7-916" secondAttribute="bottom" constant="5" id="WA6-qA-OVJ"/>
+                <constraint firstItem="5sf-a7-916" firstAttribute="top" secondItem="nJm-9V-bLx" secondAttribute="bottom" constant="8" id="uS4-eD-Qca"/>
+                <constraint firstAttribute="trailing" secondItem="nJm-9V-bLx" secondAttribute="trailing" constant="10" id="vQK-r0-4Jc"/>
+            </constraints>
+            <size key="customSize" width="214" height="296"/>
+            <point key="canvasLocation" x="-3.0534351145038165" y="107.04225352112677"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="vanh_model_1" width="3376" height="6000"/>
+    </resources>
+</document>

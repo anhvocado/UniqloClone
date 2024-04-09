@@ -11,6 +11,8 @@ class CategoryVC: UIViewController {
     @IBOutlet var sectionButton: [UIButton]!
     @IBOutlet var sectionDividerView: [UIView]!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    weak var delegate: MainTabbarShowHideDelegate?
+    weak var owner: MainVC?
     var currentTag: Int = 0 {
         didSet {
             self.configSectionUI()
@@ -19,6 +21,16 @@ class CategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     func setupCollectionView() {
@@ -59,6 +71,11 @@ extension CategoryVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as? CategoryCollectionViewCell else {
            return UICollectionViewCell()
+        }
+        cell.didSelectCategory = { [weak self] cat in
+            let vc = ListItemVC()
+            vc.title = cat
+            self?.push(to: vc)
         }
         return cell
     }
