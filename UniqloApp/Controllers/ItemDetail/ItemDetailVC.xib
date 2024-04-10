@@ -38,22 +38,22 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOE-T1-BDx">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="894"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="909.33333333333337"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOUBLE BREASTED JACKET (SET UP)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-ZM-v1f">
-                                    <rect key="frame" x="20" y="20" width="353" height="17"/>
+                                    <rect key="frame" x="20" y="20" width="353" height="20"/>
                                     <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smooth 'AIRism' fabric with the look of cotton. Stylish relaxed cut." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um9-Oo-EGr">
-                                    <rect key="frame" x="20" y="57" width="353" height="30"/>
+                                    <rect key="frame" x="20" y="60" width="353" height="35"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CH4-hg-N64">
-                                    <rect key="frame" x="0.0" y="107" width="393" height="393"/>
+                                    <rect key="frame" x="0.0" y="115" width="393" height="393"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="CH4-hg-N64" secondAttribute="height" multiplier="1:1" id="eKk-SP-RBw"/>
@@ -66,13 +66,13 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.479.000 VND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8j-SF-ORQ">
-                                    <rect key="frame" x="20" y="520" width="353" height="24"/>
+                                    <rect key="frame" x="20" y="528" width="353" height="28"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-Ol-39F">
-                                    <rect key="frame" x="20" y="564" width="353" height="50"/>
+                                    <rect key="frame" x="20" y="576" width="353" height="50"/>
                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="qRJ-Pv-bcX"/>
@@ -80,15 +80,18 @@
                                     <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="ADD TO CART"/>
+                                    <connections>
+                                        <action selector="addToCart:" destination="-1" eventType="touchUpInside" id="5RL-OC-m5N"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMILAR ITEMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYO-6X-WeB">
-                                    <rect key="frame" x="20" y="634" width="353" height="20"/>
+                                    <rect key="frame" x="20" y="646" width="353" height="23.333333333333371"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-eX-pk6">
-                                    <rect key="frame" x="20" y="674" width="373" height="200"/>
+                                    <rect key="frame" x="20" y="689.33333333333337" width="373" height="200"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="bZo-XI-oEr"/>

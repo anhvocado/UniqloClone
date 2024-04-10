@@ -91,6 +91,21 @@ enum CryptoAlgorithm {
 }
 
 extension String {
+    func formattedNumberString(newString: String) -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        formatter.minimumFractionDigits = 0
+        formatter.maximumFractionDigits = 0
+
+        let newStringWithoutCommas = self.replacingOccurrences(of: ".", with: "") + newString
+
+        if let number = formatter.number(from: newStringWithoutCommas), let formattedString = formatter.string(from: number) {
+            return formattedString
+        }
+
+        return self
+    }
 
     func hmac(algorithm: CryptoAlgorithm, key: String) -> String {
         let str = self.cString(using: String.Encoding.utf8)

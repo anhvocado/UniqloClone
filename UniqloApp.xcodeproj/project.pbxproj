@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11DC881FE0870F366EE0DC94 /* Pods_UniqloApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A884C74DF92FE684286DE28B /* Pods_UniqloApp.framework */; };
+		174118C42BC53BA300B04CCE /* CheckOutItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174118C22BC53BA300B04CCE /* CheckOutItemCell.swift */; };
+		174118C52BC53BA300B04CCE /* CheckOutItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 174118C32BC53BA300B04CCE /* CheckOutItemCell.xib */; };
 		1759D99C2BBC041600E4FE60 /* TT Commons DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1759D98A2BBC041600E4FE60 /* TT Commons DemiBold.otf */; };
 		1759D99D2BBC041600E4FE60 /* TT Commons Thin Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1759D98B2BBC041600E4FE60 /* TT Commons Thin Italic.otf */; };
 		1759D99E2BBC041600E4FE60 /* TT Commons ExtraBold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1759D98C2BBC041600E4FE60 /* TT Commons ExtraBold Italic.otf */; };
@@ -41,6 +43,8 @@
 		17BB88742BC3E5C200CAA43F /* ItemDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BB88722BC3E5C200CAA43F /* ItemDetailVC.xib */; };
 		17BB88772BC3F45E00CAA43F /* ItemImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB88752BC3F45E00CAA43F /* ItemImageCell.swift */; };
 		17BB88782BC3F45E00CAA43F /* ItemImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BB88762BC3F45E00CAA43F /* ItemImageCell.xib */; };
+		17DCD3F02BC67519001A997B /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCD3EF2BC67519001A997B /* CartItem.swift */; };
+		17DCD3F22BC67589001A997B /* UniqloItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCD3F12BC67589001A997B /* UniqloItem.swift */; };
 		17FC49952BB135B400A84FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49942BB135B400A84FCE /* AppDelegate.swift */; };
 		17FC499E2BB135B600A84FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17FC499D2BB135B600A84FCE /* Assets.xcassets */; };
 		17FC49A12BB135B600A84FCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17FC499F2BB135B600A84FCE /* LaunchScreen.storyboard */; };
@@ -98,6 +102,8 @@
 
 /* Begin PBXFileReference section */
 		03C19072E9C47BFAE98DA8C1 /* Pods-UniqloApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UniqloApp.debug.xcconfig"; path = "Target Support Files/Pods-UniqloApp/Pods-UniqloApp.debug.xcconfig"; sourceTree = "<group>"; };
+		174118C22BC53BA300B04CCE /* CheckOutItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutItemCell.swift; sourceTree = "<group>"; };
+		174118C32BC53BA300B04CCE /* CheckOutItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckOutItemCell.xib; sourceTree = "<group>"; };
 		1759D98A2BBC041600E4FE60 /* TT Commons DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons DemiBold.otf"; sourceTree = "<group>"; };
 		1759D98B2BBC041600E4FE60 /* TT Commons Thin Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons Thin Italic.otf"; sourceTree = "<group>"; };
 		1759D98C2BBC041600E4FE60 /* TT Commons ExtraBold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TT Commons ExtraBold Italic.otf"; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 		17BB88722BC3E5C200CAA43F /* ItemDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailVC.xib; sourceTree = "<group>"; };
 		17BB88752BC3F45E00CAA43F /* ItemImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageCell.swift; sourceTree = "<group>"; };
 		17BB88762BC3F45E00CAA43F /* ItemImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemImageCell.xib; sourceTree = "<group>"; };
+		17DCD3EF2BC67519001A997B /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		17DCD3F12BC67589001A997B /* UniqloItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqloItem.swift; sourceTree = "<group>"; };
 		17FC49912BB135B400A84FCE /* UniqloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniqloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17FC49942BB135B400A84FCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17FC499D2BB135B600A84FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +210,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174118C12BC53B7F00B04CCE /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				6702211C2BB2BAEF008CFF8E /* CartVC.swift */,
+				6702211D2BB2BAEF008CFF8E /* CartVC.xib */,
+				174118C22BC53BA300B04CCE /* CheckOutItemCell.swift */,
+				174118C32BC53BA300B04CCE /* CheckOutItemCell.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		1759D9892BBC03EE00E4FE60 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +270,15 @@
 			path = ItemDetail;
 			sourceTree = "<group>";
 		};
+		17DCD3EE2BC6750B001A997B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17DCD3EF2BC67519001A997B /* CartItem.swift */,
+				17DCD3F12BC67589001A997B /* UniqloItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		17E7C8CD2BBD608F00C7F6B6 /* ListItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +311,7 @@
 		17FC49932BB135B400A84FCE /* UniqloApp */ = {
 			isa = PBXGroup;
 			children = (
+				17DCD3EE2BC6750B001A997B /* Models */,
 				1759D9892BBC03EE00E4FE60 /* Fonts */,
 				67FCD6452BB156210080DA2B /* Controllers */,
 				17FC49D72BB139E500A84FCE /* Extensions */,
@@ -446,6 +475,7 @@
 		67FCD6452BB156210080DA2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				174118C12BC53B7F00B04CCE /* Cart */,
 				17BB88702BC3E5A900CAA43F /* ItemDetail */,
 				17E7C8CD2BBD608F00C7F6B6 /* ListItem */,
 				1759D9B22BBC15E000E4FE60 /* Category */,
@@ -458,8 +488,6 @@
 				670221152BB2B468008CFF8E /* MainVC.xib */,
 				670221182BB2BAD9008CFF8E /* ProfileVC.swift */,
 				670221192BB2BAD9008CFF8E /* ProfileVC.xib */,
-				6702211C2BB2BAEF008CFF8E /* CartVC.swift */,
-				6702211D2BB2BAEF008CFF8E /* CartVC.xib */,
 				670221202BB2BBB5008CFF8E /* HomeVC.swift */,
 				670221212BB2BBB5008CFF8E /* HomeVC.xib */,
 				17BB886E2BC3E20800CAA43F /* BaseVC.swift */,
@@ -565,6 +593,7 @@
 				1759D99F2BBC041600E4FE60 /* TT Commons Light.otf in Resources */,
 				17BB886D2BC3DBC500CAA43F /* UniqloItemCell.xib in Resources */,
 				1759D9A82BBC041600E4FE60 /* TT Commons Bold.otf in Resources */,
+				174118C52BC53BA300B04CCE /* CheckOutItemCell.xib in Resources */,
 				1759D9AA2BBC041600E4FE60 /* TT Commons Bold Italic.otf in Resources */,
 				1759D9B12BBC092800E4FE60 /* CategoryVC.xib in Resources */,
 				670221172BB2B468008CFF8E /* MainVC.xib in Resources */,
@@ -639,7 +668,9 @@
 				17FC49F12BB13A1600A84FCE /* String+Extension.swift in Sources */,
 				17FC49C82BB137B900A84FCE /* APIProcessingManager.swift in Sources */,
 				67FCD6482BB156320080DA2B /* RegisterVC.swift in Sources */,
+				17DCD3F02BC67519001A997B /* CartItem.swift in Sources */,
 				17FC49BE2BB137AB00A84FCE /* APIDispatcherProtocol.swift in Sources */,
+				174118C42BC53BA300B04CCE /* CheckOutItemCell.swift in Sources */,
 				17FC49C92BB137B900A84FCE /* APIUtilities.swift in Sources */,
 				17BB886F2BC3E20800CAA43F /* BaseVC.swift in Sources */,
 				17FC49F02BB13A1600A84FCE /* UIColor+Extension.swift in Sources */,
@@ -670,6 +701,7 @@
 				67FCD64C2BB1577C0080DA2B /* LoginVC.swift in Sources */,
 				17FC49B82BB137A400A84FCE /* APIRequest.swift in Sources */,
 				17FC49F62BB13A1600A84FCE /* UILabel+Extension.swift in Sources */,
+				17DCD3F22BC67589001A997B /* UniqloItem.swift in Sources */,
 				17FC49BB2BB137A400A84FCE /* APIError.swift in Sources */,
 				17BB88732BC3E5C200CAA43F /* ItemDetailVC.swift in Sources */,
 				17FC49EE2BB13A1600A84FCE /* Collection+Extension.swift in Sources */,

@@ -112,7 +112,6 @@ class MainVC: UIViewController, UITabBarControllerDelegate, MainTabbarShowHideDe
         homeVC.owner = self
         
         let cartNav = UINavigationController(rootViewController: cartVC)
-        cartVC.navigationController?.setNavigationBarHidden(true, animated: false)
         cartVC.delegate = self
 
         let profileNav = UINavigationController(rootViewController: profileVC)
