@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Side exterior, 13-inch MacBook Air, strikingly thin profile, ports on left and right sides, Midnight colour.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

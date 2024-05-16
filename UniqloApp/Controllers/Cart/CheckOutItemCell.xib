@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,7 +55,7 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="244.000 VND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lje-lg-XPS">
-                        <rect key="frame" x="188" y="63" width="102.33333333333331" height="18"/>
+                        <rect key="frame" x="188" y="63" width="107" height="21"/>
                         <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -67,7 +68,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3V-63-2Ay">
-                        <rect key="frame" x="188" y="91" width="40" height="25"/>
+                        <rect key="frame" x="188" y="94" width="40" height="25"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCJ-Wj-6EC">
                                 <rect key="frame" x="0.0" y="0.0" width="40" height="25"/>
@@ -78,7 +79,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvH-b6-D3M">
-                                <rect key="frame" x="9.6666666666666572" y="5" width="5" height="15"/>
+                                <rect key="frame" x="7.6666666666666563" y="3.6666666666666714" width="8.6666666666666643" height="17.666666666666668"/>
                                 <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,7 +108,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBTOTAL:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-CQ-WAe">
-                        <rect key="frame" x="188" y="126" width="80" height="17"/>
+                        <rect key="frame" x="188" y="129" width="80" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="Esa-lP-l6r"/>
                         </constraints>
@@ -116,7 +117,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="244.000 VND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjh-Qv-KhC">
-                        <rect key="frame" x="273" y="124" width="151" height="20"/>
+                        <rect key="frame" x="273" y="126.66666666666667" width="151" height="23.333333333333329"/>
                         <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -149,6 +150,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="itemCount" destination="NvH-b6-D3M" id="zD7-8N-qX1"/>
+                <outlet property="itemImage" destination="6bb-oH-2wa" id="UCx-Wz-Roc"/>
                 <outlet property="itemName" destination="oI4-JB-DYC" id="VRb-0v-Yyp"/>
                 <outlet property="itemPrice" destination="lje-lg-XPS" id="X2Y-Ty-riR"/>
                 <outlet property="itemPriceTotal" destination="Sjh-Qv-KhC" id="XtW-Tu-RzI"/>

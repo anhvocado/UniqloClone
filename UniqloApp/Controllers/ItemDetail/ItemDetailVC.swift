@@ -11,9 +11,14 @@ class ItemDetailVC: BaseVC {
     @IBOutlet weak var priceItemLb: UILabel!
     @IBOutlet weak var itemImageCollectionView: UICollectionView!
     @IBOutlet weak var similarItemCollectionView: UICollectionView!
+    var item: UniqloItem!
+    var similarItems: [UniqloItem] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = ""
+        self.nameItemLb.text = item.name
+        self.priceItemLb.text = item.getPriceString()
+        self.desItemLb.text = item.des
         self.setupCollectionView()
     }
 
@@ -32,12 +37,8 @@ class ItemDetailVC: BaseVC {
         //MARK: Remove later, dummy data
         let alertVC = UIAlertController(title: nil, message: "Add to cart?", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
-            let item = UniqloItem(id: 1, name: "Short blue jean", des: "It is just a jean, don't read this line again", price: 299000)
-            let item2 = UniqloItem(id: 2, name: "Long white dress", des: "It is just a dress, don't read this line again", price: 590000)
-            let cartItem = CartItem(item: item, count: 1)
-            let cartItem2 = CartItem(item: item2, count: 1)
+            let cartItem = CartItem(item: self.item, count: 1)
             CartManager.shared.addToCart(item: cartItem)
-            CartManager.shared.addToCart(item: cartItem2)
         }))
         alertVC.modalPresentationStyle = .overFullScreen
         self.present(alertVC, animated: true)
@@ -47,9 +48,9 @@ class ItemDetailVC: BaseVC {
 extension ItemDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == itemImageCollectionView {
-            return 3
+            return 1
         } else {
-            return 10
+            return self.similarItems.count
         }
     }
     
@@ -67,11 +68,13 @@ extension ItemDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             guard let cell = itemImageCollectionView.dequeueReusableCell(withReuseIdentifier: "ItemImageCell", for: indexPath) as? ItemImageCell else {
                return UICollectionViewCell()
             }
+            cell.imageViewItem.image = UIImage(named: item.imageName)
             return cell
         } else {
             guard let cell = similarItemCollectionView.dequeueReusableCell(withReuseIdentifier: "UniqloItemCell", for: indexPath) as? UniqloItemCell else {
                return UICollectionViewCell()
             }
+            cell.setupData(item: similarItems[indexPath.item])
             return cell
         }
     }

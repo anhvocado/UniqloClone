@@ -16,13 +16,13 @@ struct CartItem: Codable {
     
     func getPriceString() -> String {
         let priceString = "\(self.item.price)".formattedNumberString(newString: "")
-        return "\(priceString) VND"
+        return "\(priceString)$"
     }
     
     func getTotalPriceString() -> String {
         let total: Int = self.item.price * self.itemCount
         let totalPriceString = "\(total)".formattedNumberString(newString: "")
-        return "\(totalPriceString) VND"
+        return "\(totalPriceString)$"
     }
 }
 
@@ -100,6 +100,6 @@ class CartManager: NSObject {
         for item in cartData {
             totalPrice += item.item.price * item.itemCount
         }
-        return "\(totalPrice)".formattedNumberString(newString: "") + " VND"
+        return "\(totalPrice)".formattedNumberString(newString: "") + "$"
     }
 }

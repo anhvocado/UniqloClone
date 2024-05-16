@@ -10,7 +10,7 @@ import UIKit
 class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tableView: UITableView!
     var didSelectCategory: ((String) -> Void)?
-    var categoryItem: [String] = ["TOPS", "OUTERWEAR", "BOTTOMS", "DRESSES & SKIRTS", "SPORT UTILITY WEAR", "UV Protection", "INNERWEAR & UNDERWEAR", "LOUGEWEAR & HOMEWEAR", "ACCESSORIES", "MATERNITY CLOTHES"]
+    var categoryItem: [String] = ["MACBOOK", "OUTERWEAR", "BOTTOMS", "DRESSES & SKIRTS", "SPORT UTILITY WEAR", "UV Protection", "INNERWEAR & UNDERWEAR", "LOUGEWEAR & HOMEWEAR", "ACCESSORIES", "MATERNITY CLOTHES"]
     override func awakeFromNib() {
         super.awakeFromNib()
         tableView.delegate = self

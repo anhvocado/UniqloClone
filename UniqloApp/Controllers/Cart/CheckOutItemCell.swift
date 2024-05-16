@@ -8,6 +8,7 @@
 import UIKit
 
 class CheckOutItemCell: UITableViewCell {
+    @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemCount: UILabel!
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
@@ -35,6 +36,7 @@ class CheckOutItemCell: UITableViewCell {
     func setupData(cartItem: CartItem) {
         data = cartItem
         self.itemName.text = data?.item.name
+        self.itemImage.image = UIImage(named: data?.item.imageName ?? "")
         self.itemCount.text = "\(data?.itemCount ?? 0)"
         self.itemPrice.text = data?.getPriceString()
         self.itemPriceTotal.text = data?.getTotalPriceString()
