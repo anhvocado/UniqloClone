@@ -43,6 +43,7 @@
 		17BB88742BC3E5C200CAA43F /* ItemDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BB88722BC3E5C200CAA43F /* ItemDetailVC.xib */; };
 		17BB88772BC3F45E00CAA43F /* ItemImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB88752BC3F45E00CAA43F /* ItemImageCell.swift */; };
 		17BB88782BC3F45E00CAA43F /* ItemImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BB88762BC3F45E00CAA43F /* ItemImageCell.xib */; };
+		17D13C912C06C923004458B7 /* CategoryListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D13C902C06C923004458B7 /* CategoryListAPI.swift */; };
 		17DCD3F02BC67519001A997B /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCD3EF2BC67519001A997B /* CartItem.swift */; };
 		17DCD3F22BC67589001A997B /* UniqloItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DCD3F12BC67589001A997B /* UniqloItem.swift */; };
 		17FC49952BB135B400A84FCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49942BB135B400A84FCE /* AppDelegate.swift */; };
@@ -137,6 +138,7 @@
 		17BB88722BC3E5C200CAA43F /* ItemDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailVC.xib; sourceTree = "<group>"; };
 		17BB88752BC3F45E00CAA43F /* ItemImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImageCell.swift; sourceTree = "<group>"; };
 		17BB88762BC3F45E00CAA43F /* ItemImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemImageCell.xib; sourceTree = "<group>"; };
+		17D13C902C06C923004458B7 /* CategoryListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListAPI.swift; sourceTree = "<group>"; };
 		17DCD3EF2BC67519001A997B /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		17DCD3F12BC67589001A997B /* UniqloItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqloItem.swift; sourceTree = "<group>"; };
 		17FC49912BB135B400A84FCE /* UniqloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniqloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				17FC49A92BB1367200A84FCE /* CoreNetwork */,
+				17D13C902C06C923004458B7 /* CategoryListAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				17FC49BB2BB137A400A84FCE /* APIError.swift in Sources */,
 				17BB88732BC3E5C200CAA43F /* ItemDetailVC.swift in Sources */,
 				17FC49EE2BB13A1600A84FCE /* Collection+Extension.swift in Sources */,
+				17D13C912C06C923004458B7 /* CategoryListAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

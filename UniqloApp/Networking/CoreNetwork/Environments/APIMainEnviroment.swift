@@ -13,16 +13,7 @@ import SwiftyJSON
 class APIMainEnviroment: APIEnviromentProtocol {
     
     var baseUrl: String {
-        #if DEVELOP
-        if let baseUrl = ProcessInfo.processInfo.environment["BASEURL"] {
-            return "\(baseUrl)/api"
-        }
-        return "http://videoapp.rikkei.org/api"
-        #elseif STAGING
-        return "https://stg.tenorino.app/api"
-        #else
-        return "https://tenorino.app/api"
-        #endif
+        return "http://localhost:3003"
     }
     
     var baseUrlV2: String {

@@ -13,6 +13,7 @@ class CategoryVC: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     weak var delegate: MainTabbarShowHideDelegate?
     weak var owner: MainVC?
+    var sections: [CategoryInfo] = []
     var currentTag: Int = 0 {
         didSet {
             self.configSectionUI()
@@ -21,6 +22,11 @@ class CategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        CategoryListAPI().execute(success: { response in
+            self.sections = response.data
+        }, failure: { error in
+            print(error)
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
