@@ -85,9 +85,13 @@
 		17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */; };
 		17FC49FC2BB13A1600A84FCE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */; };
 		17FC49FD2BB13A1600A84FCE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */; };
+		1BEF93BD2C08CE15008FA898 /* ProductDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF93BC2C08CE15008FA898 /* ProductDetailAPI.swift */; };
+		1BEF93C02C08E4CF008FA898 /* BottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF93BE2C08E4CF008FA898 /* BottomSheetVC.swift */; };
+		1BEF93C12C08E4CF008FA898 /* BottomSheetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF93BF2C08E4CF008FA898 /* BottomSheetVC.xib */; };
+		1BEF93C42C08E80B008FA898 /* VariationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF93C22C08E80B008FA898 /* VariationCell.swift */; };
+		1BEF93C52C08E80B008FA898 /* VariationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BEF93C32C08E80B008FA898 /* VariationCell.xib */; };
 		3E0953852C08CA2500B9061A /* GetCartItemAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0953842C08CA2500B9061A /* GetCartItemAPI.swift */; };
 		3E0953872C08D83D00B9061A /* AddItemToCartAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0953862C08D83D00B9061A /* AddItemToCartAPI.swift */; };
-		1BEF93BD2C08CE15008FA898 /* ProductDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF93BC2C08CE15008FA898 /* ProductDetailAPI.swift */; };
 		3ECD98C22C07801E00976B3F /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD98C12C07801E00976B3F /* LoginAPI.swift */; };
 		3ECD98C42C07803700976B3F /* RegisterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD98C32C07803700976B3F /* RegisterAPI.swift */; };
 		670221162BB2B468008CFF8E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221142BB2B468008CFF8E /* MainVC.swift */; };
@@ -188,9 +192,13 @@
 		17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1BEF93BC2C08CE15008FA898 /* ProductDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAPI.swift; sourceTree = "<group>"; };
+		1BEF93BE2C08E4CF008FA898 /* BottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetVC.swift; sourceTree = "<group>"; };
+		1BEF93BF2C08E4CF008FA898 /* BottomSheetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomSheetVC.xib; sourceTree = "<group>"; };
+		1BEF93C22C08E80B008FA898 /* VariationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariationCell.swift; sourceTree = "<group>"; };
+		1BEF93C32C08E80B008FA898 /* VariationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VariationCell.xib; sourceTree = "<group>"; };
 		3E0953842C08CA2500B9061A /* GetCartItemAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCartItemAPI.swift; sourceTree = "<group>"; };
 		3E0953862C08D83D00B9061A /* AddItemToCartAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemToCartAPI.swift; sourceTree = "<group>"; };
-		1BEF93BC2C08CE15008FA898 /* ProductDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAPI.swift; sourceTree = "<group>"; };
 		3ECD98C12C07801E00976B3F /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		3ECD98C32C07803700976B3F /* RegisterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPI.swift; sourceTree = "<group>"; };
 		670221142BB2B468008CFF8E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -280,6 +288,10 @@
 				17BB88722BC3E5C200CAA43F /* ItemDetailVC.xib */,
 				17BB88752BC3F45E00CAA43F /* ItemImageCell.swift */,
 				17BB88762BC3F45E00CAA43F /* ItemImageCell.xib */,
+				1BEF93BE2C08E4CF008FA898 /* BottomSheetVC.swift */,
+				1BEF93BF2C08E4CF008FA898 /* BottomSheetVC.xib */,
+				1BEF93C22C08E80B008FA898 /* VariationCell.swift */,
+				1BEF93C32C08E80B008FA898 /* VariationCell.xib */,
 			);
 			path = ItemDetail;
 			sourceTree = "<group>";
@@ -597,10 +609,12 @@
 				17FC49A12BB135B600A84FCE /* LaunchScreen.storyboard in Resources */,
 				1759D99E2BBC041600E4FE60 /* TT Commons ExtraBold Italic.otf in Resources */,
 				1759D9A42BBC041600E4FE60 /* TT Commons ExtraLight Italic.otf in Resources */,
+				1BEF93C52C08E80B008FA898 /* VariationCell.xib in Resources */,
 				1759D9A22BBC041600E4FE60 /* TT Commons ExtraBold.otf in Resources */,
 				670221282BB2CB42008CFF8E /* ItemCell.xib in Resources */,
 				1759D9BA2BBC165E00E4FE60 /* CategoryCell.xib in Resources */,
 				17FC499E2BB135B600A84FCE /* Assets.xcassets in Resources */,
+				1BEF93C12C08E4CF008FA898 /* BottomSheetVC.xib in Resources */,
 				1759D9A32BBC041600E4FE60 /* TT Commons Light Italic.otf in Resources */,
 				1759D9A52BBC041600E4FE60 /* TT Commons Italic.otf in Resources */,
 				1759D9A02BBC041600E4FE60 /* TT Commons Thin.otf in Resources */,
@@ -675,7 +689,9 @@
 				6702211E2BB2BAEF008CFF8E /* CartVC.swift in Sources */,
 				17FC49CD2BB137C000A84FCE /* APIUIIndicator.swift in Sources */,
 				17FC49D22BB138C200A84FCE /* LoadingIndicatorView.swift in Sources */,
+				1BEF93C02C08E4CF008FA898 /* BottomSheetVC.swift in Sources */,
 				17FC49F32BB13A1600A84FCE /* UIImageView+Extension.swift in Sources */,
+				1BEF93C42C08E80B008FA898 /* VariationCell.swift in Sources */,
 				17FC49FC2BB13A1600A84FCE /* UIApplication+Extension.swift in Sources */,
 				17FC49EF2BB13A1600A84FCE /* Throttler.swift in Sources */,
 				17FC49F92BB13A1600A84FCE /* UIViewController+Extension.swift in Sources */,

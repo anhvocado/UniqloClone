@@ -38,14 +38,9 @@ class ItemDetailVC: BaseVC {
     }
     
     @IBAction func addToCart(_ sender: UIButton) {
-        //MARK: Remove later, dummy data
-        let alertVC = UIAlertController(title: nil, message: "Add to cart?", preferredStyle: .alert)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
-            //let cartItem = CartItem(item: self.item, count: 1)
-            //CartManager.shared.addToCart(item: cartItem)
-        }))
-        alertVC.modalPresentationStyle = .overFullScreen
-        self.present(alertVC, animated: true)
+        let vc = BottomSheetVC()
+        vc.variations = item.variations
+        self.present(vc, animated: true)
     }
 }
 

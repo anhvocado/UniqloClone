@@ -89,7 +89,7 @@ struct UniqloProduct: Codable {
     }
     
     func getPriceString() -> String {
-        let priceString = "\(self.price ?? "")".formattedNumberString(newString: "")
+        let priceString = "\(self.price ?? "")"
         return "\(priceString)$"
     }
 }
