@@ -13,7 +13,7 @@ import SwiftyJSON
 class APIMainEnviroment: APIEnviromentProtocol {
     
     var baseUrl: String {
-        return "http://192.168.1.76:3003"
+        return "http://192.168.0.109:3003"
     }
     
     var baseUrlV2: String {

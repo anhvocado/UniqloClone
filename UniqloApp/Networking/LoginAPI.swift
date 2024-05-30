@@ -18,7 +18,7 @@ class LoginAPI: APIOperation<LoginResponse> {
         ]
         super.init(request: APIRequest(name: "API login",
                                        baseURL: APIMainEnviroment().baseUrl,
-                                       path: "/login",
+                                       path: "auth/login",
                                        method: .post,
                                        parameters: .body(parameters)))
     }
@@ -43,7 +43,7 @@ struct LoginInfo: Codable {
     var active: Bool?
     var passwordReset: String?
     var birthday: String?
-//    var carts:
+    var carts: [CartInfo] = []
     var accessToken: String?
     var refreshToken: String?
     
@@ -59,8 +59,20 @@ struct LoginInfo: Codable {
         active = json["active"].bool
         passwordReset = json["password_reset"].string
         birthday = json["birthday"].string
-//        carts =
+        carts = json["carts"].arrayValue.map({CartInfo(json: $0)})
         accessToken = json["accessToken"].string
         refreshToken = json["refreshToken"].string
+    }
+}
+
+struct CartInfo: Codable {
+    var id: Int?
+    var variationId: Int?
+    var quantity: Int?
+    
+    init(json: JSON) {
+        id = json["id"].int
+        variationId = json["variationId"].int
+        quantity = json["quantity"].int
     }
 }
