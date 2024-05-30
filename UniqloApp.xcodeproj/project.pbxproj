@@ -97,6 +97,7 @@
 		670221232BB2BBB5008CFF8E /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670221212BB2BBB5008CFF8E /* HomeVC.xib */; };
 		670221272BB2CB42008CFF8E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221252BB2CB42008CFF8E /* ItemCell.swift */; };
 		670221282BB2CB42008CFF8E /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670221262BB2CB42008CFF8E /* ItemCell.xib */; };
+		675C4D7D2C08881500B8E3A1 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675C4D7C2C08881500B8E3A1 /* SharedData.swift */; };
 		67FCD6482BB156320080DA2B /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FCD6462BB156320080DA2B /* RegisterVC.swift */; };
 		67FCD6492BB156320080DA2B /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67FCD6472BB156320080DA2B /* RegisterVC.xib */; };
 		67FCD64C2BB1577C0080DA2B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FCD64A2BB1577C0080DA2B /* LoginVC.swift */; };
@@ -196,6 +197,7 @@
 		670221212BB2BBB5008CFF8E /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
 		670221252BB2CB42008CFF8E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		670221262BB2CB42008CFF8E /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		675C4D7C2C08881500B8E3A1 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		67FCD6462BB156320080DA2B /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		67FCD6472BB156320080DA2B /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		67FCD64A2BB1577C0080DA2B /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				17DCD3EF2BC67519001A997B /* CartItem.swift */,
 				17DCD3F12BC67589001A997B /* UniqloItem.swift */,
+				675C4D7C2C08881500B8E3A1 /* SharedData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				17FC49F62BB13A1600A84FCE /* UILabel+Extension.swift in Sources */,
 				17DCD3F22BC67589001A997B /* UniqloItem.swift in Sources */,
 				17FC49BB2BB137A400A84FCE /* APIError.swift in Sources */,
+				675C4D7D2C08881500B8E3A1 /* SharedData.swift in Sources */,
 				17BB88732BC3E5C200CAA43F /* ItemDetailVC.swift in Sources */,
 				17FC49EE2BB13A1600A84FCE /* Collection+Extension.swift in Sources */,
 				17D13C912C06C923004458B7 /* CategoryListAPI.swift in Sources */,

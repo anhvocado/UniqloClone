@@ -24,12 +24,12 @@ class RegisterVC: UIViewController {
         
         let userDefaults = UserDefaults.standard
         userDefaults.set(userName, forKey: "userName")
-        userDefaults.set(userName, forKey: "emailAddress")
-        userDefaults.set(userName, forKey: "passWord")
+        userDefaults.set(userName, forKey: "email")
+        userDefaults.set(userName, forKey: "password")
  
         RegisterAPI(name: userName, email: emailAddress, password: passWord).execute(success: { response in
-            let loginVC = LoginVC()
-            self.navigationController?.pushViewController(loginVC, animated: true)
+            let mainVC = MainVC()
+            self.navigationController?.pushViewController(mainVC, animated: true)
         }, failure: { error in
             print("Register error: \(error)")
         })
