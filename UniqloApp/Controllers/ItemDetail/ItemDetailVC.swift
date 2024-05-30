@@ -9,6 +9,8 @@ import SDWebImage
 class ItemDetailVC: BaseVC {
     @IBOutlet weak var nameItemLb: UILabel!
     @IBOutlet weak var desItemLb: UILabel!
+    @IBOutlet weak var numberOfRatingLb: UILabel!
+    @IBOutlet weak var ratingStackView: UIStackView!
     @IBOutlet weak var priceItemLb: UILabel!
     @IBOutlet weak var itemImageCollectionView: UICollectionView!
     @IBOutlet weak var similarItemCollectionView: UICollectionView!
@@ -23,6 +25,8 @@ class ItemDetailVC: BaseVC {
         self.nameItemLb.text = item.name
         self.priceItemLb.text = item.getPriceString()
         self.desItemLb.text = item.des
+        self.numberOfRatingLb.text = "(\(item.numberOfRating ?? 0)"
+        self.updateStarImages(for: item.rating ?? "0.0")
         self.setupCollectionView()
     }
 
@@ -35,6 +39,42 @@ class ItemDetailVC: BaseVC {
         similarItemCollectionView.dataSource = self
         similarItemCollectionView.register(UINib(nibName: "UniqloItemCell", bundle: nil), forCellWithReuseIdentifier:  "UniqloItemCell")
         self.similarItemCollectionView.reloadData()
+    }
+    
+    func updateStarImages(for ratingString: String) {
+        // Ensure the stack view is empty before adding new images
+        self.ratingStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        
+        // Convert the rating string to a float
+        guard let rating = Float(ratingString) else {
+            return
+        }
+        
+        // Determine the number of filled and empty stars
+        let fullStarCount = Int(rating)
+        let halfStar = (rating - Float(fullStarCount)) >= 0.5
+        let emptyStarCount = 5 - fullStarCount - (halfStar ? 1 : 0)
+        
+        // Add filled star images
+        for _ in 0..<fullStarCount {
+            let filledStarImageView = UIImageView(image: UIImage(systemName: "star.fill"))
+            filledStarImageView.tintColor = .systemYellow
+            ratingStackView.addArrangedSubview(filledStarImageView)
+        }
+        
+        // Add a half star image if needed
+        if halfStar {
+            let halfStarImageView = UIImageView(image: UIImage(systemName: "star.lefthalf.fill"))
+            halfStarImageView.tintColor = .systemYellow
+            ratingStackView.addArrangedSubview(halfStarImageView)
+        }
+        
+        // Add empty star images
+        for _ in 0..<emptyStarCount {
+            let emptyStarImageView = UIImageView(image: UIImage(systemName: "star"))
+            emptyStarImageView.tintColor = .lightGray
+            ratingStackView.addArrangedSubview(emptyStarImageView)
+        }
     }
     
     @IBAction func addToCart(_ sender: UIButton) {

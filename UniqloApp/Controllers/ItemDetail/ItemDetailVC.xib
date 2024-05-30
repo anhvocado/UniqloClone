@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,9 @@
                 <outlet property="desItemLb" destination="um9-Oo-EGr" id="WqZ-gB-3xs"/>
                 <outlet property="itemImageCollectionView" destination="CH4-hg-N64" id="w3w-GV-oUM"/>
                 <outlet property="nameItemLb" destination="6W0-ZM-v1f" id="9PZ-PZ-7Gs"/>
+                <outlet property="numberOfRatingLb" destination="7yI-Up-3x9" id="3Et-VH-AQQ"/>
                 <outlet property="priceItemLb" destination="D8j-SF-ORQ" id="J90-W2-v11"/>
+                <outlet property="ratingStackView" destination="119-TT-hSD" id="mdK-8Q-5Aa"/>
                 <outlet property="similarItemCollectionView" destination="wIL-eX-pk6" id="Igx-PE-QcA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,22 +41,22 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOE-T1-BDx">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="909.33333333333337"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="924"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOUBLE BREASTED JACKET (SET UP)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6W0-ZM-v1f">
-                                    <rect key="frame" x="20" y="20" width="353" height="20"/>
+                                    <rect key="frame" x="20" y="20" width="353" height="17"/>
                                     <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smooth 'AIRism' fabric with the look of cotton. Stylish relaxed cut." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="um9-Oo-EGr">
-                                    <rect key="frame" x="20" y="60" width="353" height="35"/>
+                                    <rect key="frame" x="20" y="57" width="353" height="30"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CH4-hg-N64">
-                                    <rect key="frame" x="0.0" y="115" width="393" height="393"/>
+                                    <rect key="frame" x="0.0" y="107" width="393" height="393"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="CH4-hg-N64" secondAttribute="height" multiplier="1:1" id="eKk-SP-RBw"/>
@@ -66,13 +69,13 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.479.000 VND" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D8j-SF-ORQ">
-                                    <rect key="frame" x="20" y="528" width="353" height="28"/>
+                                    <rect key="frame" x="20" y="520" width="353" height="24"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbD-Ol-39F">
-                                    <rect key="frame" x="20" y="576" width="353" height="50"/>
+                                    <rect key="frame" x="20" y="564" width="353" height="50"/>
                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="qRJ-Pv-bcX"/>
@@ -84,14 +87,21 @@
                                         <action selector="addToCart:" destination="-1" eventType="touchUpInside" id="5RL-OC-m5N"/>
                                     </connections>
                                 </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="119-TT-hSD">
+                                    <rect key="frame" x="20" y="624" width="170" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Q4B-n9-Veu"/>
+                                        <constraint firstAttribute="width" constant="170" id="xVa-3m-Q4E"/>
+                                    </constraints>
+                                </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMILAR ITEMS" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYO-6X-WeB">
-                                    <rect key="frame" x="20" y="646" width="353" height="23.333333333333371"/>
+                                    <rect key="frame" x="20" y="664" width="353" height="20"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-eX-pk6">
-                                    <rect key="frame" x="20" y="689.33333333333337" width="373" height="200"/>
+                                    <rect key="frame" x="20" y="704" width="373" height="200"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="bZo-XI-oEr"/>
@@ -103,14 +113,22 @@
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yI-Up-3x9">
+                                    <rect key="frame" x="195" y="639" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="7yI-Up-3x9" firstAttribute="leading" secondItem="119-TT-hSD" secondAttribute="trailing" constant="5" id="04W-9X-Rmb"/>
                                 <constraint firstAttribute="trailing" secondItem="CH4-hg-N64" secondAttribute="trailing" id="3dq-Dk-B36"/>
                                 <constraint firstItem="wIL-eX-pk6" firstAttribute="top" secondItem="hYO-6X-WeB" secondAttribute="bottom" constant="20" id="CoH-yL-LcG"/>
                                 <constraint firstItem="6W0-ZM-v1f" firstAttribute="top" secondItem="AOE-T1-BDx" secondAttribute="top" constant="20" id="DEz-zL-ZQ6"/>
                                 <constraint firstAttribute="trailing" secondItem="um9-Oo-EGr" secondAttribute="trailing" constant="20" id="Dk8-oD-2Qb"/>
                                 <constraint firstAttribute="bottom" secondItem="wIL-eX-pk6" secondAttribute="bottom" constant="20" id="EIP-Si-xc1"/>
+                                <constraint firstItem="119-TT-hSD" firstAttribute="leading" secondItem="AOE-T1-BDx" secondAttribute="leading" constant="20" id="G8g-Ew-AbP"/>
                                 <constraint firstItem="um9-Oo-EGr" firstAttribute="leading" secondItem="AOE-T1-BDx" secondAttribute="leading" constant="20" id="Ipn-C8-4C5"/>
                                 <constraint firstAttribute="trailing" secondItem="6W0-ZM-v1f" secondAttribute="trailing" constant="20" id="LHG-S6-Ebt"/>
                                 <constraint firstItem="CH4-hg-N64" firstAttribute="top" secondItem="um9-Oo-EGr" secondAttribute="bottom" constant="20" id="NZv-Xm-wD1"/>
@@ -124,8 +142,10 @@
                                 <constraint firstItem="CH4-hg-N64" firstAttribute="leading" secondItem="AOE-T1-BDx" secondAttribute="leading" id="Zc1-kd-iMq"/>
                                 <constraint firstItem="D8j-SF-ORQ" firstAttribute="top" secondItem="CH4-hg-N64" secondAttribute="bottom" constant="20" id="bbL-eK-CEh"/>
                                 <constraint firstItem="wIL-eX-pk6" firstAttribute="leading" secondItem="AOE-T1-BDx" secondAttribute="leading" constant="20" id="je1-0n-VZa"/>
-                                <constraint firstItem="hYO-6X-WeB" firstAttribute="top" secondItem="qbD-Ol-39F" secondAttribute="bottom" constant="20" id="p9l-xy-B8h"/>
+                                <constraint firstItem="119-TT-hSD" firstAttribute="top" secondItem="qbD-Ol-39F" secondAttribute="bottom" constant="10" id="ktG-Ar-TRW"/>
+                                <constraint firstItem="hYO-6X-WeB" firstAttribute="top" secondItem="qbD-Ol-39F" secondAttribute="bottom" constant="50" id="p9l-xy-B8h"/>
                                 <constraint firstAttribute="trailing" secondItem="D8j-SF-ORQ" secondAttribute="trailing" constant="20" id="qZl-Vf-2Vl"/>
+                                <constraint firstItem="7yI-Up-3x9" firstAttribute="centerY" secondItem="119-TT-hSD" secondAttribute="centerY" id="rap-FL-PD3"/>
                                 <constraint firstItem="qbD-Ol-39F" firstAttribute="top" secondItem="D8j-SF-ORQ" secondAttribute="bottom" constant="20" id="sLF-ka-pjb"/>
                                 <constraint firstItem="um9-Oo-EGr" firstAttribute="top" secondItem="6W0-ZM-v1f" secondAttribute="bottom" constant="20" id="zYg-Mp-CDa"/>
                             </constraints>
@@ -156,7 +176,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
