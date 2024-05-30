@@ -31,11 +31,11 @@ class LoginVC: UIViewController {
             SharedData.accessToken = response.data?.accessToken
             SharedData.email = response.data?.email
             SharedData.password = response.data?.password
-            
-            let mainVC = MainVC()
-            self.navigationController?.pushViewController(mainVC, animated: true)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.changeRoot(MainVC())
         }, failure: { error in
             print("Register error: \(error)")
+            
         })
     }
 }

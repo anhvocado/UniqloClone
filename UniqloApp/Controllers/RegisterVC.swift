@@ -28,8 +28,8 @@ class RegisterVC: UIViewController {
         userDefaults.set(userName, forKey: "password")
  
         RegisterAPI(name: userName, email: emailAddress, password: passWord).execute(success: { response in
-            let mainVC = MainVC()
-            self.navigationController?.pushViewController(mainVC, animated: true)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.changeRoot(MainVC())
         }, failure: { error in
             print("Register error: \(error)")
         })

@@ -8,8 +8,7 @@ target 'UniqloApp' do
   # Pods for UniqloApp
    pod 'Alamofire', '~> 4.8.2'
    pod 'SwiftyJSON'
-pod 'IQKeyboardManagerSwift'
-pod 'Kingfisher'
+   pod 'IQKeyboardManagerSwift'
 end
 post_install do |installer|
     installer.generated_projects.each do |project|
