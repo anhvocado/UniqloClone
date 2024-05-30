@@ -19,7 +19,7 @@ class RegisterAPI: APIOperation<RegisterResponse> {
         ]
         super.init(request: APIRequest(name: "API Register",
                                        baseURL: APIMainEnviroment().baseUrl,
-                                       path: "/auth/register",
+                                       path: "auth/register",
                                        method: .post,
                                        parameters: .body(parameters)))
     }

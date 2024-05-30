@@ -43,7 +43,7 @@ class APIMainEnviroment: APIEnviromentProtocol {
     func parseApiErrorJson(_ json: JSON, statusCode: Int?) -> APIError? {
         // Try to parse input json to error class according to your error json format
         // Example:
-         guard let success = json["status_code"].int else { return APIError.request(statusCode: statusCode, error: nil) }
+         guard let success = json["statusCode"].int else { return APIError.request(statusCode: statusCode, error: nil) }
                if success == 200 {  return nil }
                let errorMessage = json["message"].string
                let messageCode = json["status_code"].int
