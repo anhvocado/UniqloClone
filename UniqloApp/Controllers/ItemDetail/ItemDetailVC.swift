@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ItemDetailVC: BaseVC {
     @IBOutlet weak var nameItemLb: UILabel!
@@ -11,11 +12,14 @@ class ItemDetailVC: BaseVC {
     @IBOutlet weak var priceItemLb: UILabel!
     @IBOutlet weak var itemImageCollectionView: UICollectionView!
     @IBOutlet weak var similarItemCollectionView: UICollectionView!
-    var item: UniqloItem!
-    var similarItems: [UniqloItem] = []
+    var item: UniqloProduct!
+    var itemImages: [String] = []
+    var similarItems: [UniqloProduct] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = ""
+        self.itemImages = item.images.map({$0.path ?? ""})
+        itemImages.append(item.defImg ?? "")
         self.nameItemLb.text = item.name
         self.priceItemLb.text = item.getPriceString()
         self.desItemLb.text = item.des
@@ -37,8 +41,8 @@ class ItemDetailVC: BaseVC {
         //MARK: Remove later, dummy data
         let alertVC = UIAlertController(title: nil, message: "Add to cart?", preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
-            let cartItem = CartItem(item: self.item, count: 1)
-            CartManager.shared.addToCart(item: cartItem)
+            //let cartItem = CartItem(item: self.item, count: 1)
+            //CartManager.shared.addToCart(item: cartItem)
         }))
         alertVC.modalPresentationStyle = .overFullScreen
         self.present(alertVC, animated: true)
@@ -48,7 +52,7 @@ class ItemDetailVC: BaseVC {
 extension ItemDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == itemImageCollectionView {
-            return 1
+            return itemImages.count
         } else {
             return self.similarItems.count
         }
@@ -68,7 +72,9 @@ extension ItemDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
             guard let cell = itemImageCollectionView.dequeueReusableCell(withReuseIdentifier: "ItemImageCell", for: indexPath) as? ItemImageCell else {
                return UICollectionViewCell()
             }
-            cell.imageViewItem.image = UIImage(named: item.imageName)
+            if let url = URL(string: self.itemImages[indexPath.item]) {
+                cell.imageViewItem.sd_setImage(with: url)
+            }
             return cell
         } else {
             guard let cell = similarItemCollectionView.dequeueReusableCell(withReuseIdentifier: "UniqloItemCell", for: indexPath) as? UniqloItemCell else {

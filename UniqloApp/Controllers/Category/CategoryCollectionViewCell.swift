@@ -9,21 +9,21 @@ import UIKit
 
 class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var tableView: UITableView!
-    var didSelectCategory: ((String) -> Void)?
-        var categoryItem: [Brand] = []
-        override func awakeFromNib() {
-            super.awakeFromNib()
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(UINib(nibName: String(describing: CategoryCell.self), bundle: nil),
-                               forCellReuseIdentifier: String(describing: CategoryCell.self))
-        }
+    var didSelectCategory: ((Brand) -> Void)?
+    var categoryItem: [Brand] = []
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: String(describing: CategoryCell.self), bundle: nil),
+                           forCellReuseIdentifier: String(describing: CategoryCell.self))
+    }
     
     func setupData(brands: [Brand]) {
-            self.categoryItem = brands
-            self.tableView.reloadData()
-        }
+        self.categoryItem = brands
+        self.tableView.reloadData()
     }
+}
 
     extension CategoryCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -39,7 +39,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            self.didSelectCategory?(String(describing:categoryItem[indexPath.row]))
+            self.didSelectCategory?(categoryItem[indexPath.row])
         }
         
         func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

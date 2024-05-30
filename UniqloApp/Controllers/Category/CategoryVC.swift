@@ -87,7 +87,8 @@ class CategoryVC: UIViewController {
            cell.setupData(brands: self.sections.first?.brands ?? [])
            cell.didSelectCategory = { [weak self] cat in
                let vc = ListItemVC()
-               vc.title = cat
+               vc.title = cat.name
+               vc.brandId = cat.id
                self?.push(to: vc)
            }
            return cell

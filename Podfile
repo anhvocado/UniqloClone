@@ -9,6 +9,7 @@ target 'UniqloApp' do
    pod 'Alamofire', '~> 4.8.2'
    pod 'SwiftyJSON'
    pod 'IQKeyboardManagerSwift'
+   pod 'SDWebImage'
 end
 post_install do |installer|
     installer.generated_projects.each do |project|

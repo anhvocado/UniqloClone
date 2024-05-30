@@ -40,25 +40,4 @@ struct CartItemInfo: Codable {
     }
 }
 
-struct Variation: Codable {
-    var id: Int?
-    var color: String?
-    var price: String?
-    var stock: Int?
-    var sold: Int?
-    var image: String?
-    //TODO
-//    var product: ProductInfo?
-    
-    init(json: JSON) {
-        id = json["id"].int
-        color = json["color"].string
-        price = json["price"].string
-        stock = json["stock"].int
-        sold = json["sold"].int
-        image = json["image"].string
-        //TODO
-//        product = ProductInfo(json: json["product"])
-    }
-}
 
