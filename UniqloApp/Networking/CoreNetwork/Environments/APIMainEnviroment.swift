@@ -13,7 +13,7 @@ import SwiftyJSON
 class APIMainEnviroment: APIEnviromentProtocol {
     
     var baseUrl: String {
-        return "http://10.101.30.155:3003"
+        return "http://192.168.1.76:3003"
     }
     
     var baseUrlV2: String {
@@ -44,7 +44,7 @@ class APIMainEnviroment: APIEnviromentProtocol {
         // Try to parse input json to error class according to your error json format
         // Example:
          guard let success = json["statusCode"].int else { return APIError.request(statusCode: statusCode, error: nil) }
-               if success == 200 {  return nil }
+               if success == 200 || success == 201 {  return nil }
                let errorMessage = json["message"].string
                let messageCode = json["status_code"].int
                let errorData = json["errors"]

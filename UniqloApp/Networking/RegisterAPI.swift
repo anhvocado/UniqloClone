@@ -15,7 +15,8 @@ class RegisterAPI: APIOperation<RegisterResponse> {
         let parameters: Parameters = [
             "name": name,
             "email": email,
-            "password": password
+            "password": password,
+            "birthday": "2001-11-26"
         ]
         super.init(request: APIRequest(name: "API Register",
                                        baseURL: APIMainEnviroment().baseUrl,
