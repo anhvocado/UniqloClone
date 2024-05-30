@@ -39,7 +39,7 @@ public enum APIResponse {
         }
         
         // Get data successfully
-        self = .success(json[request.rootKeyValue])
+        self = .success(json)
     }
 }
 
