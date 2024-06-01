@@ -27,7 +27,6 @@ class CartVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getCartList(id: SharedData.userId ?? 0)
-        self.totalPrice.text = getTotalPrice()
     }
 
     func setupTableView() {
@@ -38,7 +37,6 @@ class CartVC: UIViewController {
     }
     
     func setupView() {
-        self.totalPrice.text = CartManager.shared.getTotalPrice()
         self.emptyView.isHidden = !cartItem.isEmpty
         self.dataView.isHidden = cartItem.isEmpty
         self.cartItemTableView.reloadData()
@@ -48,6 +46,7 @@ class CartVC: UIViewController {
         GetCartItemAPI(id: SharedData.userId ?? 0).execute(success: {[weak self] response in
             self?.cartItem = response.data
             self?.cartItemTableView.reloadData()
+            self?.totalPrice.text = self?.getTotalPrice()
         }, failure: { error in
             print(error)
         })
@@ -61,7 +60,12 @@ class CartVC: UIViewController {
                 totalPrice += totalItemPrice
             }
         }
-        return "\(totalPrice)" + "$"
+        return "\(totalPrice)" + "0$"
+    }
+    
+    @IBAction func onCheckOut(_ sender: Any) {
+        let vc = ShippingInfoVC()
+        self.push(to: vc)
     }
 }
 

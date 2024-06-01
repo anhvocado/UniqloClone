@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TT Commons Bold.otf">
+            <string>TTCommons-Bold</string>
+        </array>
+        <array key="TT Commons DemiBold.otf">
+            <string>TTCommons-DemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShippingInfoVC" customModule="UniqloApp" customModuleProvider="target">
+            <connections>
+                <outlet property="addressTF" destination="s3B-eh-eOv" id="8YL-bN-Lmc"/>
+                <outlet property="nameTF" destination="EOp-yq-pz9" id="cph-Lz-dDW"/>
+                <outlet property="phoneTF" destination="J1p-xe-Kp6" id="kue-Ga-d1U"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHIPPING INFO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swe-cW-iNI">
+                    <rect key="frame" x="106.66666666666669" y="58.999999999999993" width="180" height="28.666666666666664"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="O1h-AQ-Wpg">
+                    <rect key="frame" x="21.666666666666657" y="107.66666666666669" width="350" height="247"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIP-Ri-yJC">
+                            <rect key="frame" x="0.0" y="0.0" width="35.333333333333336" height="14"/>
+                            <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EOp-yq-pz9">
+                            <rect key="frame" x="0.0" y="27.999999999999986" width="350" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="350" id="YV5-7f-MDX"/>
+                                <constraint firstAttribute="height" constant="45" id="ffg-RP-sd8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADDRESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaO-N5-UdX">
+                            <rect key="frame" x="0.0" y="86.999999999999986" width="55" height="14"/>
+                            <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3B-eh-eOv">
+                            <rect key="frame" x="0.0" y="115" width="350" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="350" id="ViD-Uv-nND"/>
+                                <constraint firstAttribute="height" constant="45" id="gwr-7k-utB"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1n-4u-kc7">
+                            <rect key="frame" x="0.0" y="174" width="42.666666666666664" height="14"/>
+                            <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J1p-xe-Kp6">
+                            <rect key="frame" x="0.0" y="202" width="350" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="350" id="W88-HN-uDY"/>
+                                <constraint firstAttribute="height" constant="45" id="uZM-xl-wgZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="350" id="QCF-u0-I9z"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBW-C1-FAn">
+                    <rect key="frame" x="20" y="374.66666666666669" width="353" height="53"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="41L-hI-L0N"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="TTCommons-Bold" family="TT Commons" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="ORDER"/>
+                    <connections>
+                        <action selector="onSubmitOrder:" destination="-1" eventType="touchUpInside" id="mNc-1u-H6N"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iBW-C1-FAn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3dq-vj-7Sa"/>
+                <constraint firstItem="iBW-C1-FAn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="E57-wm-LLD"/>
+                <constraint firstItem="iBW-C1-FAn" firstAttribute="top" secondItem="O1h-AQ-Wpg" secondAttribute="bottom" constant="20" id="Idu-qk-Ssp"/>
+                <constraint firstItem="O1h-AQ-Wpg" firstAttribute="top" secondItem="swe-cW-iNI" secondAttribute="bottom" constant="20" id="Xwz-W5-YZS"/>
+                <constraint firstItem="swe-cW-iNI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zrs-yu-yeq"/>
+                <constraint firstItem="swe-cW-iNI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dCP-eP-mGq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iBW-C1-FAn" secondAttribute="trailing" constant="20" id="jca-Sh-O9r"/>
+                <constraint firstItem="O1h-AQ-Wpg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lhI-eH-3Ua"/>
+            </constraints>
+            <point key="canvasLocation" x="58" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
