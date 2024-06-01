@@ -40,6 +40,7 @@ class BottomSheetVC: UIViewController {
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
             //let cartItem = CartItem(item: self.item, count: 1)
             //CartManager.shared.addToCart(item: cartItem)
+            AddItemToCartAPI().addItemToCartAPI(accountId: SharedData.userId ?? 0, variationId: self.variations[self.selectedItem].id ?? 0, quantity: 1)
         }))
         alertVC.modalPresentationStyle = .overFullScreen
         self.present(alertVC, animated: true)

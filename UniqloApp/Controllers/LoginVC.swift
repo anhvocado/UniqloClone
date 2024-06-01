@@ -14,23 +14,21 @@ class LoginVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.emailTF.text = "user1@gmail.com"
+        self.passwordTF.text = "user1@gmail.com"
     }
 
     @IBAction func onLogin(_ sender: Any) {
         let emailAddress = self.emailTF.text ?? ""
         let passWord = self.passwordTF.text ?? ""
-        
-//        let userDefaults = UserDefaults.standard
-//        userDefaults.set(userName, forKey: "emailAddress")
-//        userDefaults.set(userName, forKey: "passWord")
+
         LoginAPI(email: emailAddress, password: passWord).execute(success: { response in
             //get carts
             self.view.endEditing(true)
             SharedData.accessToken = response.data?.accessToken
             SharedData.email = response.data?.email
             SharedData.password = response.data?.password
+            SharedData.userId = response.data?.id
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.changeRoot(MainVC())
         }, failure: { error in

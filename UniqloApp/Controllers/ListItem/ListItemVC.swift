@@ -12,6 +12,10 @@ class ListItemVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.getListItem()
     }
     

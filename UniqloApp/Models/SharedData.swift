@@ -19,9 +19,9 @@ class SharedData {
         }
     }
     
-    class var userId: String? {
+    class var userId: Int? {
         get {
-            return (UserDefaults.standard.value(forKey: "userId") as? String)
+            return (UserDefaults.standard.value(forKey: "userId") as? Int)
         }
         set(value) {
             UserDefaults.standard.set(value, forKey: "userId")
