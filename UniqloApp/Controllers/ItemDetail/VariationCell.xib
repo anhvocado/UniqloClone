@@ -26,21 +26,29 @@
                         <rect key="frame" x="5" y="5" width="71" height="60"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JI4-Nq-reR">
+                        <rect key="frame" x="0.0" y="0.0" width="81" height="70"/>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstItem="JI4-Nq-reR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0BA-vr-3Uj"/>
                 <constraint firstAttribute="bottom" secondItem="sv5-Uu-pIH" secondAttribute="bottom" constant="5" id="3W7-iZ-ZGe"/>
                 <constraint firstItem="eAv-hW-APM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4pa-2O-fFR"/>
+                <constraint firstAttribute="trailing" secondItem="JI4-Nq-reR" secondAttribute="trailing" id="7Tu-5f-OIf"/>
                 <constraint firstAttribute="trailing" secondItem="sv5-Uu-pIH" secondAttribute="trailing" constant="5" id="8TK-p9-Fg8"/>
                 <constraint firstItem="sv5-Uu-pIH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="EZg-jp-Hsp"/>
                 <constraint firstAttribute="trailing" secondItem="eAv-hW-APM" secondAttribute="trailing" id="Nee-Nj-mWd"/>
                 <constraint firstAttribute="bottom" secondItem="eAv-hW-APM" secondAttribute="bottom" id="RvV-fE-2MU"/>
                 <constraint firstItem="eAv-hW-APM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="S1o-F4-rhE"/>
+                <constraint firstItem="JI4-Nq-reR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gUi-gn-blJ"/>
+                <constraint firstAttribute="bottom" secondItem="JI4-Nq-reR" secondAttribute="bottom" id="pvr-bN-yP9"/>
                 <constraint firstItem="sv5-Uu-pIH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="wty-pc-Naj"/>
             </constraints>
             <size key="customSize" width="81" height="70"/>
             <connections>
+                <outlet property="ratingImageView" destination="JI4-Nq-reR" id="mgp-ml-SoQ"/>
                 <outlet property="varCellBorder" destination="eAv-hW-APM" id="kRj-kt-IBX"/>
                 <outlet property="varCellColor" destination="sv5-Uu-pIH" id="dem-6f-Htb"/>
             </connections>

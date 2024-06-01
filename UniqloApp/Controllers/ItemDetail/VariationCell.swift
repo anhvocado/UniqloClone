@@ -40,17 +40,27 @@ enum StringColor: String {
 class VariationCell: UICollectionViewCell {
     @IBOutlet weak var varCellColor: UIView!
     @IBOutlet weak var varCellBorder: UIView!
+    @IBOutlet weak var ratingImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
     func setupCell(item: Variation, isPicked: Bool = false) {
+        ratingImageView.isHidden = true
         if isPicked {
             varCellBorder.isHidden = false
         } else {
             varCellBorder.isHidden = true
         }
         varCellColor.backgroundColor = StringColor(rawValue: item.color ?? "White")?.uiColor
+    }
+    
+    func setUpReview(isPicked: Bool = false) {
+        varCellBorder.isHidden = true
+        varCellColor.isHidden = true
+        ratingImageView.isHidden = false
+        ratingImageView.image = isPicked == true ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+        ratingImageView.tintColor = isPicked == true ? UIColor.systemYellow : UIColor.lightGray
     }
 }
