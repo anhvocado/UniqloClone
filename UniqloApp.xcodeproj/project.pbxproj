@@ -85,6 +85,10 @@
 		17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */; };
 		17FC49FC2BB13A1600A84FCE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */; };
 		17FC49FD2BB13A1600A84FCE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */; };
+		1BC6A2E12C0CA22F009AB53D /* OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6A2DF2C0CA22F009AB53D /* OrderListVC.swift */; };
+		1BC6A2E22C0CA22F009AB53D /* OrderListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6A2E02C0CA22F009AB53D /* OrderListVC.xib */; };
+		1BC6A2E52C0CA318009AB53D /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6A2E32C0CA318009AB53D /* OrderCell.swift */; };
+		1BC6A2E62C0CA318009AB53D /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6A2E42C0CA318009AB53D /* OrderCell.xib */; };
 		1BE57B462C0B8D7B00C86592 /* SendReviewAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE57B452C0B8D7B00C86592 /* SendReviewAPI.swift */; };
 		1BEF93BD2C08CE15008FA898 /* ProductDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF93BC2C08CE15008FA898 /* ProductDetailAPI.swift */; };
 		1BEF93C02C08E4CF008FA898 /* BottomSheetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF93BE2C08E4CF008FA898 /* BottomSheetVC.swift */; };
@@ -198,6 +202,10 @@
 		17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1BC6A2DF2C0CA22F009AB53D /* OrderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListVC.swift; sourceTree = "<group>"; };
+		1BC6A2E02C0CA22F009AB53D /* OrderListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListVC.xib; sourceTree = "<group>"; };
+		1BC6A2E32C0CA318009AB53D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		1BC6A2E42C0CA318009AB53D /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		1BE57B452C0B8D7B00C86592 /* SendReviewAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendReviewAPI.swift; sourceTree = "<group>"; };
 		1BEF93BC2C08CE15008FA898 /* ProductDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailAPI.swift; sourceTree = "<group>"; };
 		1BEF93BE2C08E4CF008FA898 /* BottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetVC.swift; sourceTree = "<group>"; };
@@ -505,6 +513,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		1BC6A2DE2C0CA182009AB53D /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				1BC6A2DF2C0CA22F009AB53D /* OrderListVC.swift */,
+				1BC6A2E02C0CA22F009AB53D /* OrderListVC.xib */,
+				1BC6A2E32C0CA318009AB53D /* OrderCell.swift */,
+				1BC6A2E42C0CA318009AB53D /* OrderCell.xib */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		53A3573B8009DFBD4760F7B9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +545,7 @@
 		67FCD6452BB156210080DA2B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1BC6A2DE2C0CA182009AB53D /* Order */,
 				174118C12BC53B7F00B04CCE /* Cart */,
 				17BB88702BC3E5A900CAA43F /* ItemDetail */,
 				17E7C8CD2BBD608F00C7F6B6 /* ListItem */,
@@ -615,6 +635,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1759D9A62BBC041600E4FE60 /* TT Commons Medium.otf in Resources */,
+				1BC6A2E22C0CA22F009AB53D /* OrderListVC.xib in Resources */,
 				6702211B2BB2BAD9008CFF8E /* ProfileVC.xib in Resources */,
 				1759D9AC2BBC041600E4FE60 /* TT Commons DemiBold Italic.otf in Resources */,
 				17BB88692BC3D86500CAA43F /* ListItemVC.xib in Resources */,
@@ -650,6 +671,7 @@
 				174118C52BC53BA300B04CCE /* CheckOutItemCell.xib in Resources */,
 				1759D9AA2BBC041600E4FE60 /* TT Commons Bold Italic.otf in Resources */,
 				1759D9B12BBC092800E4FE60 /* CategoryVC.xib in Resources */,
+				1BC6A2E62C0CA318009AB53D /* OrderCell.xib in Resources */,
 				670221172BB2B468008CFF8E /* MainVC.xib in Resources */,
 				1759D99C2BBC041600E4FE60 /* TT Commons DemiBold.otf in Resources */,
 				1759D9A72BBC041600E4FE60 /* TT Commons Regular.otf in Resources */,
@@ -714,6 +736,7 @@
 				17FC49FC2BB13A1600A84FCE /* UIApplication+Extension.swift in Sources */,
 				17FC49EF2BB13A1600A84FCE /* Throttler.swift in Sources */,
 				17FC49F92BB13A1600A84FCE /* UIViewController+Extension.swift in Sources */,
+				1BC6A2E12C0CA22F009AB53D /* OrderListVC.swift in Sources */,
 				17FC49B92BB137A400A84FCE /* APIResponse.swift in Sources */,
 				3E0953872C08D83D00B9061A /* AddItemToCartAPI.swift in Sources */,
 				17BB886C2BC3DBC500CAA43F /* UniqloItemCell.swift in Sources */,
@@ -763,6 +786,7 @@
 				17FC49952BB135B400A84FCE /* AppDelegate.swift in Sources */,
 				17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */,
 				1759D9B02BBC092800E4FE60 /* CategoryVC.swift in Sources */,
+				1BC6A2E52C0CA318009AB53D /* OrderCell.swift in Sources */,
 				67FCD64C2BB1577C0080DA2B /* LoginVC.swift in Sources */,
 				17FC49B82BB137A400A84FCE /* APIRequest.swift in Sources */,
 				17FC49F62BB13A1600A84FCE /* UILabel+Extension.swift in Sources */,

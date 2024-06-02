@@ -20,7 +20,8 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func onOrderList(_ sender: Any) {
-        
+        let vc = OrderListVC()
+        self.push(to: vc)
     }
     
     @IBAction func onWishlist(_ sender: Any) {
