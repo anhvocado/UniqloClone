@@ -40,7 +40,12 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func onLogout(_ sender: Any) {
-        
+        SharedData.accessToken = nil
+        SharedData.userId = nil
+        SharedData.password = nil
+        SharedData.email = nil
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.changeRoot(LoginVC())
     }
     
     func getListItem() {
