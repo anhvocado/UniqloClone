@@ -36,6 +36,22 @@ class ListItemVC: BaseVC {
             print(error)
         })
     }
+    
+    func moveToDetail(item: UniqloProduct) {
+        DetailRecommendItemsProductAPI(id: item.id ?? 0).execute(success: { [weak self] response in
+            let productIDs = response.data.compactMap { $0.productId }
+            let similarItems: [UniqloProduct] = self?.items.filter({ productIDs.contains($0.id ?? 0) }) ?? []
+            DispatchQueue.main.async {
+                let vc = ItemDetailVC()
+                vc.item = item
+                vc.similarItems = similarItems
+                vc.totalItems = self?.items ?? []
+                self?.push(to: vc)
+            }
+        }, failure: { error in
+            print(error)
+        })
+    }
 }
 
 extension ListItemVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -58,10 +74,6 @@ extension ListItemVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = ItemDetailVC()
-        let item = items[indexPath.item]
-        vc.item = item
-        vc.similarItems = items.filter({ $0.id != item.id })
-        self.push(to: vc)
+        self.moveToDetail(item: items[indexPath.item])
     }
 }

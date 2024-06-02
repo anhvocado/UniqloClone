@@ -20,6 +20,7 @@ class ItemDetailVC: BaseVC {
     var item: UniqloProduct!
     var itemImages: [String] = []
     var similarItems: [UniqloProduct] = []
+    var totalItems: [UniqloProduct] = []
     var currentRatingSelection: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,7 +152,7 @@ class ItemDetailVC: BaseVC {
     }
     
     func handleReviewResult(failed: Bool) {
-        var message = failed == true ? "Failed to post review!" : "Review posted!"
+        let message = failed == true ? "Failed to post review!" : "Review posted!"
         let alertVC = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { _ in
             if !failed {
@@ -175,6 +176,22 @@ class ItemDetailVC: BaseVC {
         let vc = BottomSheetVC()
         vc.variations = item.variations
         self.present(vc, animated: true)
+    }
+    
+    func moveToDetail(item: UniqloProduct) {
+        DetailRecommendItemsProductAPI(id: item.id ?? 0).execute(success: { [weak self] response in
+            let productIDs = response.data.compactMap { $0.productId }
+            let similarItems: [UniqloProduct] = self?.totalItems.filter({ productIDs.contains($0.id ?? 0) }) ?? []
+            DispatchQueue.main.async {
+                let vc = ItemDetailVC()
+                vc.item = item
+                vc.similarItems = similarItems
+                vc.totalItems = self?.totalItems ?? []
+                self?.push(to: vc)
+            }
+        }, failure: { error in
+            print(error)
+        })
     }
 }
 
@@ -229,6 +246,8 @@ extension ItemDetailVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
         if collectionView == reviewCollectionView {
             self.currentRatingSelection = indexPath.item + 1
             self.reviewCollectionView.reloadData()
+        } else if collectionView == similarItemCollectionView {
+            self.moveToDetail(item: self.similarItems[indexPath.item])
         }
     }
 }

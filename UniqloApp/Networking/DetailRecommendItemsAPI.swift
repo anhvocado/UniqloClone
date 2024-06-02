@@ -21,8 +21,7 @@ import Foundation
 import SwiftyJSON
 
 class DetailRecommendItemsProductAPI: APIOperation<DetailRecommendItemsProductResponse> {
-    init() {
-        let id = 4
+    init(id: Int) {
         super.init(request: APIRequest(name: "API recommend",
                                        baseURL: APIMainEnviroment().baseUrl,
                                        path: "recommend/\(id)",
