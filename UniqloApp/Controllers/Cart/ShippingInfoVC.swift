@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ShippingInfoVC: UIViewController {
+class ShippingInfoVC: BaseVC {
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var addressTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!

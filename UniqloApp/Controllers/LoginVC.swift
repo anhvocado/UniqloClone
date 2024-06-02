@@ -28,6 +28,9 @@ class LoginVC: UIViewController {
 //            SharedData.accessToken = response.data?.accessToken
 //            SharedData.email = response.data?.email
 //            SharedData.password = response.data?.password
+//            SharedData.userName = response.data?.name
+//            SharedData.gender = response.data?.gender
+//            SharedData.birthday = response.data?.birthday
 //            SharedData.userId = response.data?.id
 //            let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //            appDelegate.changeRoot(MainVC())

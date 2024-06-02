@@ -14,6 +14,7 @@ class ProfileVC: UIViewController {
     var itemsMightLike: [UniqloProduct] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "PROFILE"
         self.setupCollectionView()
         self.getListItem()
     }
@@ -26,7 +27,9 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func onProfileDetail(_ sender: Any) {
-        
+        let vc = HomeVC()
+        vc.title = "User Infomation"
+        self.push(to: vc)
     }
     
     @IBAction func onOrderList(_ sender: Any) {

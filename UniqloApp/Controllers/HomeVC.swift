@@ -7,13 +7,17 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
-    weak var delegate: MainTabbarShowHideDelegate?
-    weak var owner: MainVC?
-    
+class HomeVC: BaseVC {
+    @IBOutlet weak var nameLb: UILabel!
+    @IBOutlet weak var emailLb: UILabel!
+    @IBOutlet weak var birthdayLb: UILabel!
+    @IBOutlet weak var genderLb: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.nameLb.text = SharedData.userName
+        self.birthdayLb.text = SharedData.birthday
+        self.genderLb.text = SharedData.gender
+        self.emailLb.text = SharedData.email
         // Do any additional setup after loading the view.
     }
 

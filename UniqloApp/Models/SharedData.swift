@@ -45,6 +45,24 @@ class SharedData {
             UserDefaults.standard.set(value, forKey: "email")
         }
     }
+    
+    class var gender: String? {
+        get {
+            return (UserDefaults.standard.value(forKey: "gender") as? String)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "gender")
+        }
+    }
+    
+    class var birthday: String? {
+        get {
+            return (UserDefaults.standard.value(forKey: "birthday") as? String)
+        }
+        set(value) {
+            UserDefaults.standard.set(value, forKey: "birthday")
+        }
+    }
 
     class var password: String? {
         get {

@@ -8,7 +8,7 @@
 import UIKit
 import SwiftyJSON
 
-class OrderListVC: UIViewController {
+class OrderListVC: BaseVC {
     @IBOutlet weak var orderTableView: UITableView!
     var orders: [OrderItem] = []
     override func viewDidLoad() {
