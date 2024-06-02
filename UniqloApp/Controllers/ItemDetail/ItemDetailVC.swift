@@ -31,6 +31,7 @@ class ItemDetailVC: BaseVC {
         self.desItemLb.text = item.des
         self.setupReview()
         self.setupCollectionView()
+        self.getSimilarItemList(productId: 2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +93,49 @@ class ItemDetailVC: BaseVC {
             let emptyStarImageView = UIImageView(image: UIImage(systemName: "star"))
             emptyStarImageView.tintColor = .lightGray
             ratingStackView.addArrangedSubview(emptyStarImageView)
+        }
+    }
+    
+    func getSimilarItemList(productId: Int) {
+        let urlString = "\(APIMainEnviroment().baseUrlV2)/recommend/\(productId)"
+
+        if let url = URL(string: urlString) {
+            let session = URLSession.shared
+            
+            // Tạo task để gọi API
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Lỗi khi gọi API: \(error)")
+                    return
+                }
+                
+                if let httpResponse = response as? HTTPURLResponse {
+                    if httpResponse.statusCode == 200 {
+                        if let data = data {
+                            do {
+                                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                                if let dataArr = json?["data"] as? [[String: Any]] {
+                                    for item in dataArr {
+                                        if let name = item["name"] as? String,
+                                           let productId = item["product_id"] as? Int {
+                                            print("Tên sản phẩm: \(name), ID sản phẩm: \(productId)")
+                                            //Append vào list recommend item id
+                                        }
+                                    }
+                                }
+                            } catch {
+                                print("Lỗi khi parse dữ liệu JSON: \(error)")
+                            }
+                        }
+                    } else {
+                        print("API trả về mã lỗi: \(httpResponse.statusCode)")
+                    }
+                }
+            }
+            
+            task.resume()
+        } else {
+            print("URL không hợp lệ")
         }
     }
     

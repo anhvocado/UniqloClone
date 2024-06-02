@@ -12,7 +12,7 @@ import SwiftyJSON
 struct ReviewResponse: Codable {
     let statusCode: Int
     let message: String
-    let data: [ReviewData]
+    let data: ReviewData
 }
 
 struct ReviewData: Codable {
