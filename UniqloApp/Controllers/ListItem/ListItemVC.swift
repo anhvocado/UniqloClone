@@ -8,6 +8,7 @@ import UIKit
 class ListItemVC: BaseVC {
     @IBOutlet weak var itemCollectionView: UICollectionView!
     var items: [UniqloProduct] = []
+    var totalItems: [UniqloProduct] = []
     var brandId: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class ListItemVC: BaseVC {
 
     func getListItem() {
         ProductListAPI().execute(success: {[weak self] response in
+            self?.totalItems = response.products
             if let brandId = self?.brandId {
                 self?.items = response.products.filter({ $0.brand?.id == brandId })
                 self?.itemCollectionView.reloadData()
@@ -40,7 +42,7 @@ class ListItemVC: BaseVC {
     func moveToDetail(item: UniqloProduct) {
         DetailRecommendItemsProductAPI(id: item.id ?? 0).execute(success: { [weak self] response in
             let productIDs = response.data.compactMap { $0.productId }
-            let similarItems: [UniqloProduct] = self?.items.filter({ productIDs.contains($0.id ?? 0) }) ?? []
+            let similarItems: [UniqloProduct] = self?.totalItems.filter({ productIDs.contains($0.id ?? 0) }) ?? []
             DispatchQueue.main.async {
                 let vc = ItemDetailVC()
                 vc.item = item
