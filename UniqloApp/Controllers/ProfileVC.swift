@@ -28,7 +28,7 @@ class ProfileVC: UIViewController {
     
     @IBAction func onProfileDetail(_ sender: Any) {
         let vc = HomeVC()
-        vc.title = "User Infomation"
+        vc.title = "User Information"
         self.push(to: vc)
     }
     
@@ -39,7 +39,9 @@ class ProfileVC: UIViewController {
     }
     
     @IBAction func onWishlist(_ sender: Any) {
-        
+        let vc = ListItemVC()
+        vc.title = "Wishlist"
+        self.push(to: vc)
     }
     
     @IBAction func onLogout(_ sender: Any) {

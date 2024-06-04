@@ -28,15 +28,23 @@ class ListItemVC: BaseVC {
     }
 
     func getListItem() {
-        ProductListAPI().execute(success: {[weak self] response in
-            self?.totalItems = response.products
-            if let brandId = self?.brandId {
+        if let brandId = self.brandId {
+            ProductListAPI().execute(success: {[weak self] response in
+                self?.totalItems = response.products
                 self?.items = response.products.filter({ $0.brand?.id == brandId })
                 self?.itemCollectionView.reloadData()
-            }
-        }, failure: { error in
-            print(error)
-        })
+            }, failure: { error in
+                print(error)
+            })
+        } else {
+            ProductListAPI().execute(success: {[weak self] response in
+                self?.totalItems = response.products
+                //MARK: Call api wishlist to get items, anh chưa thấy em viết api này, viết thêm vào nhé
+                self?.itemCollectionView.reloadData()
+            }, failure: { error in
+                print(error)
+            })
+        }
     }
     
     func moveToDetail(item: UniqloProduct) {
