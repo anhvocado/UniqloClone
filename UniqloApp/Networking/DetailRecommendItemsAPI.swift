@@ -23,7 +23,7 @@ import SwiftyJSON
 class DetailRecommendItemsProductAPI: APIOperation<DetailRecommendItemsProductResponse> {
     init(id: Int) {
         super.init(request: APIRequest(name: "API recommend",
-                                       baseURL: APIMainEnviroment().baseUrl,
+                                       baseURL: APIMainEnviroment().baseUrlV2,
                                        path: "recommend/\(id)",
                                        method: .get,
                                        parameters: .body([:])))
@@ -43,7 +43,7 @@ struct DetailRecommendItemsProduct: Codable {
     
     init(json: JSON) {
         name = json["name"].string
-        productId = json["product_id"].int
+        productId = json["id"].int
 
     }
 }

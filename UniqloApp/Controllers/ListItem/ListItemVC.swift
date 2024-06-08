@@ -50,6 +50,7 @@ class ListItemVC: BaseVC {
     func moveToDetail(item: UniqloProduct) {
         DetailRecommendItemsProductAPI(id: item.id ?? 0).execute(success: { [weak self] response in
             let productIDs = response.data.compactMap { $0.productId }
+            print("Recommended Items: \(productIDs)")
             let similarItems: [UniqloProduct] = self?.totalItems.filter({ productIDs.contains($0.id ?? 0) }) ?? []
             DispatchQueue.main.async {
                 let vc = ItemDetailVC()

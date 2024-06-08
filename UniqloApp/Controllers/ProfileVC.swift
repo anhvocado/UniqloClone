@@ -16,6 +16,10 @@ class ProfileVC: UIViewController {
         super.viewDidLoad()
         self.title = "PROFILE"
         self.setupCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.getListItem()
     }
 
@@ -64,9 +68,11 @@ class ProfileVC: UIViewController {
     
     func getItemYouMightLike() {
         //MARK: replace this api with correct api
-        DetailRecommendItemsProductAPI(id: 4).execute(success: { [weak self] response in
+        ProfileRecommendItemsAPI(userId: SharedData.userId ?? 0).execute(success: { [weak self] response in
             let productIDs = response.data.compactMap { $0.productId }
-            let similarItems: [UniqloProduct] = self?.fullItems.filter({ productIDs.contains($0.id ?? 0) }) ?? []
+            let similarItems: [UniqloProduct] = productIDs.compactMap { productId in
+                self?.fullItems.first(where: { $0.id == productId })
+            }
             self?.itemsMightLike = similarItems
             self?.similarItemCollectionView.reloadData()
         }, failure: { error in

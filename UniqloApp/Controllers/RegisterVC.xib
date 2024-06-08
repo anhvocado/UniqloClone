@@ -129,6 +129,9 @@
                     <state key="normal" title="LOG IN">
                         <color key="titleColor" systemColor="labelColor"/>
                     </state>
+                    <connections>
+                        <action selector="onPressLogin:" destination="-1" eventType="touchUpInside" id="zYc-uc-Jse"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

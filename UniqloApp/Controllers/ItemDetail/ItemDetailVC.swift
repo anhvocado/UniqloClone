@@ -32,7 +32,6 @@ class ItemDetailVC: BaseVC {
         self.desItemLb.text = item.des
         self.setupReview()
         self.setupCollectionView()
-        self.getSimilarItemList(productId: 2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,7 +97,7 @@ class ItemDetailVC: BaseVC {
     }
     
     func getSimilarItemList(productId: Int) {
-        let urlString = "\(APIMainEnviroment().baseUrlV2)/recommend/\(productId)"
+        let urlString = "http://anhvocado.local:3006/recommend/\(productId)"
 
         if let url = URL(string: urlString) {
             let session = URLSession.shared

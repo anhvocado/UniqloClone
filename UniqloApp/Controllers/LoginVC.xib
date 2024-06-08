@@ -56,6 +56,9 @@
                     <state key="normal" title="CREATE AN ACCOUNT">
                         <color key="titleColor" systemColor="labelColor"/>
                     </state>
+                    <connections>
+                        <action selector="onNewRegister:" destination="-1" eventType="touchUpInside" id="F3X-TQ-UbU"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GeO-mQ-X4N">
                     <rect key="frame" x="19.999999999999996" y="183" width="59.666666666666657" height="22"/>

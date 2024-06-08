@@ -40,6 +40,7 @@ class OrderCell: UITableViewCell {
         self.order = order
         if let item = self.order {
             self.orderStatus.text = order.status
+            self.itemName.text = order.details.first?.variation?.name
             self.itemPrice.text = "\(order.details.first?.variation?.price ?? "")$"
             self.itemQuantity.text = "x\(order.details.first?.quantity ?? 0)"
             self.itemColorView.backgroundColor = StringColor(rawValue: order.details.first?.variation?.color ?? "White")?.uiColor

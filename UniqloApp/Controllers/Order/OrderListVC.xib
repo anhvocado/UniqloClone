@@ -26,7 +26,7 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
             <constraints>
                 <constraint firstItem="tdd-Ms-26z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9X5-3M-YG6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tdd-Ms-26z" secondAttribute="bottom" id="Bl5-NF-kz8"/>
@@ -39,6 +39,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

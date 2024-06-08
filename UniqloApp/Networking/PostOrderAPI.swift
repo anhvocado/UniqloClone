@@ -42,9 +42,14 @@ struct OrderDetail: Codable {
     var quantity: Int?
     
     init(json: JSON) {
-        variation = VariationOrder(json: json["variation"])
+        variation = self.convertToVariation(text: json["variation"].string ?? "")
         id = json["id"].int
         quantity = json["quantity"].int
+    }
+    
+    func convertToVariation(text: String) -> VariationOrder {
+        let newJson = JSON.init(parseJSON: text)
+        return VariationOrder(json: newJson)
     }
 }
 
@@ -53,12 +58,16 @@ struct VariationOrder: Codable {
     var color: String?
     var price: String?
     var image: String?
+    var productId: Int?
+    var variationId: Int?
     
     init(json: JSON) {
         name = json["name"].string
         color = json["color"].string
         price = json["price"].string
         image = json["image"].string
+        productId = json["product_id"].int
+        variationId = json["variation_id"].int
     }
 }
 

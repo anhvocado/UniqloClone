@@ -17,6 +17,12 @@ class RegisterVC: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func onPressLogin(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.changeRoot(LoginVC())
+    }
+    
+    
     @IBAction func onRegister(_ sender: Any) {
         let userName = self.nameTF.text ?? ""
         let emailAddress = self.emailTF.text ?? ""

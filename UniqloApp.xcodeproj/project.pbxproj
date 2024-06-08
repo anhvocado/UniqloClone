@@ -102,6 +102,7 @@
 		3E50448B2C0B836F00A41243 /* ShippingInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5044882C0B836F00A41243 /* ShippingInfoVC.swift */; };
 		3E50448D2C0B8ACC00A41243 /* PostOrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E50448C2C0B8ACC00A41243 /* PostOrderAPI.swift */; };
 		3E9A0A9A2C0C4EFC00F35534 /* DetailRecommendItemsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9A0A992C0C4EFC00F35534 /* DetailRecommendItemsAPI.swift */; };
+		3EAC467B2C1428F200E38DF5 /* ProfileRecommendItemsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAC467A2C1428F200E38DF5 /* ProfileRecommendItemsAPI.swift */; };
 		3ECD98C22C07801E00976B3F /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD98C12C07801E00976B3F /* LoginAPI.swift */; };
 		3ECD98C42C07803700976B3F /* RegisterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECD98C32C07803700976B3F /* RegisterAPI.swift */; };
 		670221162BB2B468008CFF8E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670221142BB2B468008CFF8E /* MainVC.swift */; };
@@ -219,6 +220,7 @@
 		3E5044892C0B836F00A41243 /* ShippingInfoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShippingInfoVC.xib; sourceTree = "<group>"; };
 		3E50448C2C0B8ACC00A41243 /* PostOrderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOrderAPI.swift; sourceTree = "<group>"; };
 		3E9A0A992C0C4EFC00F35534 /* DetailRecommendItemsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecommendItemsAPI.swift; sourceTree = "<group>"; };
+		3EAC467A2C1428F200E38DF5 /* ProfileRecommendItemsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRecommendItemsAPI.swift; sourceTree = "<group>"; };
 		3ECD98C12C07801E00976B3F /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
 		3ECD98C32C07803700976B3F /* RegisterAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAPI.swift; sourceTree = "<group>"; };
 		670221142BB2B468008CFF8E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				3E50448C2C0B8ACC00A41243 /* PostOrderAPI.swift */,
 				1BE57B452C0B8D7B00C86592 /* SendReviewAPI.swift */,
 				3E9A0A992C0C4EFC00F35534 /* DetailRecommendItemsAPI.swift */,
+				3EAC467A2C1428F200E38DF5 /* ProfileRecommendItemsAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -779,6 +782,7 @@
 				3E5044872C0B21AE00A41243 /* DeleteCartItemAPI.swift in Sources */,
 				17FC49F42BB13A1600A84FCE /* UICollectionReusableView+Extension.swift in Sources */,
 				6702211A2BB2BAD9008CFF8E /* ProfileVC.swift in Sources */,
+				3EAC467B2C1428F200E38DF5 /* ProfileRecommendItemsAPI.swift in Sources */,
 				17FC49C32BB137B200A84FCE /* APIMainEnviroment.swift in Sources */,
 				17FC49F22BB13A1600A84FCE /* UIImage+Extension.swift in Sources */,
 				17FC49F82BB13A1600A84FCE /* Date+Extension .swift in Sources */,
