@@ -2,7 +2,7 @@
 //  BaseVC.swift
 //  UniqloApp
 //
-//  Created by ThinhND3 on 08/04/2024.
+//  Created by AnhNTV3 on 08/04/2024.
 //
 
 import UIKit

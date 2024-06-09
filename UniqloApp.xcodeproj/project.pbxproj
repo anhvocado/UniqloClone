@@ -85,6 +85,7 @@
 		17FC49FB2BB13A1600A84FCE /* PHAsset+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */; };
 		17FC49FC2BB13A1600A84FCE /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */; };
 		17FC49FD2BB13A1600A84FCE /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */; };
+		1BABF6A62C15956200626890 /* PayPalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BABF6A52C15956200626890 /* PayPalViewController.swift */; };
 		1BC6A2E12C0CA22F009AB53D /* OrderListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6A2DF2C0CA22F009AB53D /* OrderListVC.swift */; };
 		1BC6A2E22C0CA22F009AB53D /* OrderListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6A2E02C0CA22F009AB53D /* OrderListVC.xib */; };
 		1BC6A2E52C0CA318009AB53D /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC6A2E32C0CA318009AB53D /* OrderCell.swift */; };
@@ -203,6 +204,7 @@
 		17FC49E82BB13A1600A84FCE /* PHAsset+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHAsset+Extension.swift"; sourceTree = "<group>"; };
 		17FC49E92BB13A1600A84FCE /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		17FC49EA2BB13A1600A84FCE /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		1BABF6A52C15956200626890 /* PayPalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalViewController.swift; sourceTree = "<group>"; };
 		1BC6A2DF2C0CA22F009AB53D /* OrderListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListVC.swift; sourceTree = "<group>"; };
 		1BC6A2E02C0CA22F009AB53D /* OrderListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListVC.xib; sourceTree = "<group>"; };
 		1BC6A2E32C0CA318009AB53D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				174118C32BC53BA300B04CCE /* CheckOutItemCell.xib */,
 				3E5044882C0B836F00A41243 /* ShippingInfoVC.swift */,
 				3E5044892C0B836F00A41243 /* ShippingInfoVC.xib */,
+				1BABF6A52C15956200626890 /* PayPalViewController.swift */,
 			);
 			path = Cart;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				17FC49F52BB13A1600A84FCE /* UICollectionView+Extension.swift in Sources */,
 				17BB88682BC3D86500CAA43F /* ListItemVC.swift in Sources */,
 				3E9A0A9A2C0C4EFC00F35534 /* DetailRecommendItemsAPI.swift in Sources */,
+				1BABF6A62C15956200626890 /* PayPalViewController.swift in Sources */,
 				1BE57B462C0B8D7B00C86592 /* SendReviewAPI.swift in Sources */,
 				17FC49EC2BB13A1600A84FCE /* Int+Extension.swift in Sources */,
 				17FC49F12BB13A1600A84FCE /* String+Extension.swift in Sources */,

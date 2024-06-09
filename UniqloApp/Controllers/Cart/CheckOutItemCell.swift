@@ -2,7 +2,7 @@
 //  CheckOutItemCell.swift
 //  UniqloApp
 //
-//  Created by ThinhND3 on 09/04/2024.
+//  Created by AnhNTV3 on 09/04/2024.
 //
 
 import UIKit
@@ -15,7 +15,8 @@ class CheckOutItemCell: UITableViewCell {
     @IBOutlet weak var itemPriceTotal: UILabel!
     @IBOutlet weak var quantityButton: UIButton!
     var didRemoveItem: ((Int) -> Void)?
-    var didUpdateItem: ((CartItem, UITableViewCell) -> Void)?
+    var didUpdateItem: ((CartItemInfo, UITableViewCell) -> Void)?
+    var data: CartItemInfo?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +24,7 @@ class CheckOutItemCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        self.data = nil
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -32,6 +34,7 @@ class CheckOutItemCell: UITableViewCell {
     }
     
     func setupData(cartItem: CartItemInfo) {
+        self.data = cartItem
         self.itemName.text = cartItem.variation?.product?.name
         if let url = URL(string: cartItem.variation?.image ?? "") {
             self.itemImage.sd_setImage(with: url)
@@ -58,18 +61,18 @@ class CheckOutItemCell: UITableViewCell {
         let optionClosure = {(action: UIAction) in
             self.itemCount.text = action.title
             self.quantityButton.menu = self.setupQuantityOptions()
-//            self.data?.itemCount = Int(action.title) ?? 1
-//            if let data = self.data {
-//                self.didUpdateItem?(data, self)
-//            }
+            self.data?.quantity = Int(action.title) ?? 1
+            if let data = self.data {
+                self.didUpdateItem?(data, self)
+            }
             
         }
         var actions = [UIAction]()
-//        for item in self.generateStringArray(itemCount: data?.itemCount ?? 0) {
-//            let state: UIAction.State = item == "\(data?.itemCount ?? 0)" ? .on : .off
-//            let action = UIAction(title: item, state: state, handler: optionClosure)
-//            actions.append(action)
-//        }
+        for item in self.generateStringArray(itemCount: data?.quantity ?? 0) {
+            let state: UIAction.State = item == "\(data?.quantity ?? 0)" ? .on : .off
+            let action = UIAction(title: item, state: state, handler: optionClosure)
+            actions.append(action)
+        }
         return UIMenu(children: actions)
     }
     
@@ -80,6 +83,6 @@ class CheckOutItemCell: UITableViewCell {
     }
     
     @IBAction func removeItem(_ sender: UIButton) {
-//        self.didRemoveItem?(data?.item.id ?? 0)
+        self.didRemoveItem?(data?.id ?? 0)
     }
 }

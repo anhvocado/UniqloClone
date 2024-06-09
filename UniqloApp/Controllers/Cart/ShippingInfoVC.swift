@@ -81,5 +81,7 @@ class ShippingInfoVC: BaseVC {
     
     @IBAction func onSubmitOrder(_ sender: Any) {
         self.createOrder(accountId: SharedData.userId ?? 0, name: nameTF.text ?? "", address: addressTF.text ?? "", phone: phoneTF.text ?? "", total: totalPrice, pay: true)
+        let paypalVC = PayPalViewController()
+        self.push(to: paypalVC)
     }
 }

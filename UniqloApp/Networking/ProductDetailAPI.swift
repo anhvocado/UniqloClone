@@ -2,11 +2,40 @@
 //  ProductDetailAPI.swift
 //  UniqloApp
 //
-//  Created by ThinhND3's Mac on 30/05/2024.
+//  Created by AnhNTV3's Mac on 30/05/2024.
 //
 
 import Foundation
 import SwiftyJSON
+
+class GetWishlist: APIOperation<WishlistResponse> {
+    init(id: Int) {
+        super.init(request: APIRequest(name: "API get wishlist",
+                                       baseURL: APIMainEnviroment().baseUrl,
+                                       path: "accounts/get-wishlists-by-account/\(id)",
+                                       method: .get,
+                                       parameters: .body([:])))
+    }
+}
+
+struct WishlistResponse: APIResponseProtocol {
+    var items: [WishlistItem] = []
+    init(json: JSON) {
+        items = json["data"].arrayValue.map({WishlistItem(json: $0)})
+    }
+}
+
+struct WishlistItem: Codable {
+    var id: Int?
+    var accountId: Int?
+    var productId: Int?
+    
+    init(json: JSON) {
+        id = json["id"].int
+        accountId = json["account_id"].int
+        productId = json["product_id"].int
+    }
+}
 
 class ProductDetailAPI: APIOperation<ProductDetailResponse> {
     init(id: Int) {

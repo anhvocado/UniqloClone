@@ -67,6 +67,55 @@ class CartVC: UIViewController {
         let vc = ShippingInfoVC()
         self.push(to: vc)
     }
+    
+    func deleteCartItem(id: Int) {
+        DeleteCartItem(id: id).execute(success: {[weak self] response in
+            self?.getCartList(id: SharedData.userId ?? 0)
+        }, failure: { error in
+            print(error)
+        })
+    }
+    
+    func updateCartItem(id: Int, quantity: Int) {
+        let apiURL = URL(string: "\(APIMainEnviroment().baseUrl)/carts/update-quantity")!
+        let requestBody: [String: Any] = [
+            "id": id,
+            "status": quantity
+        ]
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: requestBody, options: [])
+
+            var request = URLRequest(url: apiURL)
+            request.httpMethod = "PUT"
+            request.httpBody = jsonData
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    print("Lỗi khi gọi API: \(error)")
+                    return
+                }
+
+                if let data = data {
+                    do {
+                        let cartResponse = try JSONDecoder().decode(NoneResponse.self, from: data)
+                        print("Phản hồi từ API:")
+                        print("Status code: \(cartResponse.statusCode)")
+                        print("Message: \(cartResponse.message)")
+                        DispatchQueue.main.async {
+                            self.getCartList(id: SharedData.userId ?? 0)
+                        }
+                    } catch {
+                        print("Lỗi khi parse phản hồi từ API: \(error)")
+                    }
+                }
+            }
+
+            task.resume()
+        } catch {
+            print("Lỗi khi chuyển dữ liệu body thành JSON: \(error)")
+        }
+    }
 }
 
 extension CartVC: UITableViewDelegate, UITableViewDataSource {
@@ -79,18 +128,16 @@ extension CartVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.setupData(cartItem: cartItem[indexPath.row])
-//        cell.setupQuantityButton()
-//        cell.didRemoveItem = { [weak self] id in
-//            CartManager.shared.removeItem(withId: id)
-//            self?.cartItem = CartManager.shared.cartData
-//        }
-//        cell.didUpdateItem = { [weak self] item, aCell in
-//            guard let self = self else { return }
-//            if let _ = tableView.indexPath(for: aCell) {
-//                CartManager.shared.updateItem(item: item)
-//                self.cartItem = CartManager.shared.cartData
-//            }
-//        }
+        cell.setupQuantityButton()
+        cell.didRemoveItem = { [weak self] id in
+            self?.deleteCartItem(id: id)
+        }
+        cell.didUpdateItem = { [weak self] item, aCell in
+            guard let self = self else { return }
+            if let _ = tableView.indexPath(for: aCell) {
+                self.updateCartItem(id: item.id ?? 0, quantity: item.quantity ?? 0)
+            }
+        }
         return cell
     }
 }

@@ -39,12 +39,24 @@ class ListItemVC: BaseVC {
         } else {
             ProductListAPI().execute(success: {[weak self] response in
                 self?.totalItems = response.products
-                //MARK: Call api wishlist to get items, anh chưa thấy em viết api này, viết thêm vào nhé
-                self?.itemCollectionView.reloadData()
+                self?.getWishlist()
             }, failure: { error in
                 print(error)
             })
         }
+    }
+    
+    func getWishlist() {
+        GetWishlist(id: SharedData.userId ?? 0).execute(success: {[weak self] response in
+            let productIDs = response.items.compactMap { $0.productId }
+            let wishlistItems: [UniqloProduct] = productIDs.compactMap { productId in
+                self?.totalItems.first(where: { $0.id == productId })
+            }
+            self?.items = wishlistItems
+            self?.itemCollectionView.reloadData()
+        }, failure: { error in
+            print(error)
+        })
     }
     
     func moveToDetail(item: UniqloProduct) {

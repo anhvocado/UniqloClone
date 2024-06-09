@@ -29,7 +29,6 @@ class LoginVC: UIViewController {
         let passWord = self.passwordTF.text ?? ""
 
         LoginAPI(email: emailAddress, password: passWord).execute(success: { response in
-            //get carts
             self.view.endEditing(true)
             SharedData.accessToken = response.data?.accessToken
             SharedData.email = response.data?.email

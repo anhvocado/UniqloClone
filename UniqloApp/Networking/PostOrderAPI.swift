@@ -14,6 +14,11 @@ struct OrderResponse: Codable {
     let data: [Order]
 }
 
+struct NoneResponse: Codable {
+    let statusCode: Int
+    let message: String
+}
+
 struct Order: Codable {
     let id: Int
     let name: String

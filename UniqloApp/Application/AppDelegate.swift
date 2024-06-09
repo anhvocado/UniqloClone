@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  UniqloApp
 //
-//  Created by ThinhND3 on 25/03/2024.
+//  Created by AnhNTV3 on 25/03/2024.
 //
 
 import UIKit
@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func changeRoot(_ controller: UIViewController) {
-        let mainVC = UINavigationController(rootViewController: controller)
-        SystemBoots.instance.changeRoot(window: &window, rootController: mainVC)
+        SystemBoots.instance.changeRoot(window: &window, rootController: controller)
     }
 }
 
@@ -37,7 +36,7 @@ class SystemBoots {
     weak var appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     
     // MARK: - Actions
-    func changeRoot(window: inout UIWindow?, rootController: UINavigationController) {
+    func changeRoot(window: inout UIWindow?, rootController: UIViewController) {
         // Setup app's window
         guard window == nil else {
             window?.rootViewController = rootController

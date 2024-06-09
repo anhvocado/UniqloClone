@@ -67,7 +67,6 @@ class ProfileVC: UIViewController {
     }
     
     func getItemYouMightLike() {
-        //MARK: replace this api with correct api
         ProfileRecommendItemsAPI(userId: SharedData.userId ?? 0).execute(success: { [weak self] response in
             let productIDs = response.data.compactMap { $0.productId }
             let similarItems: [UniqloProduct] = productIDs.compactMap { productId in
@@ -83,7 +82,9 @@ class ProfileVC: UIViewController {
     func moveToDetail(item: UniqloProduct) {
         DetailRecommendItemsProductAPI(id: item.id ?? 0).execute(success: { [weak self] response in
             let productIDs = response.data.compactMap { $0.productId }
-            let similarItems: [UniqloProduct] = self?.fullItems.filter({ productIDs.contains($0.id ?? 0) }) ?? []
+            let similarItems: [UniqloProduct] = productIDs.compactMap { productId in
+                self?.fullItems.first(where: { $0.id == productId })
+            }
             DispatchQueue.main.async {
                 let vc = ItemDetailVC()
                 vc.item = item
