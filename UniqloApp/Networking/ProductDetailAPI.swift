@@ -8,6 +8,35 @@
 import Foundation
 import SwiftyJSON
 
+class GetRatingOfProductAPI: APIOperation<RatingResponse> {
+    init(id: Int) {
+        super.init(request: APIRequest(name: "API get ratings",
+                                       baseURL: APIMainEnviroment().baseUrl,
+                                       path: "evaluations/stars/\(id)",
+                                       method: .get,
+                                       parameters: .body([:])))
+    }
+}
+
+struct RatingResponse: APIResponseProtocol {
+    var items: [RatingDetail] = []
+    init(json: JSON) {
+        items = json["data"].arrayValue.map({RatingDetail(json: $0)})
+    }
+}
+
+struct RatingDetail: Codable {
+    var id: Int?
+    var star: Int?
+    var account: LoginInfo?
+    
+    init(json: JSON) {
+        id = json["id"].int
+        star = json["star"].int
+        account = LoginInfo(json: json["account"])
+    }
+}
+
 class GetWishlist: APIOperation<WishlistResponse> {
     init(id: Int) {
         super.init(request: APIRequest(name: "API get wishlist",

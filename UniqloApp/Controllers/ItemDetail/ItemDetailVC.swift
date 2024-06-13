@@ -30,7 +30,7 @@ class ItemDetailVC: BaseVC {
         self.nameItemLb.text = item.name
         self.priceItemLb.text = item.getPriceString()
         self.desItemLb.text = item.des
-        self.setupReview()
+        self.getRating()
         self.setupCollectionView()
     }
     
@@ -40,9 +40,9 @@ class ItemDetailVC: BaseVC {
         IQKeyboardManager.shared.enable = true
     }
     
-    func setupReview() {
-        self.numberOfRatingLb.text = "(\(item.numberOfRating ?? 0))"
-        self.updateStarImages(for: item.rating ?? "0.0")
+    func setupReview(count: Int, rating: String) {
+        self.numberOfRatingLb.text = "(\(count))"
+        self.updateStarImages(for: rating)
     }
 
     func setupCollectionView() {
@@ -58,6 +58,26 @@ class ItemDetailVC: BaseVC {
         similarItemCollectionView.dataSource = self
         similarItemCollectionView.register(UINib(nibName: "UniqloItemCell", bundle: nil), forCellWithReuseIdentifier:  "UniqloItemCell")
         self.similarItemCollectionView.reloadData()
+    }
+    
+    func getRating() {
+        GetRatingOfProductAPI(id: self.item.id ?? 0).execute(success: { [weak self] response in
+            let stars = response.items.compactMap { $0.star }
+            self?.setupReview(count: response.items.count, rating: self?.averageRatingString(ratings: stars) ?? "0.0")
+        }, failure: { error in
+            print(error)
+        })
+    }
+    
+    func averageRatingString(ratings: [Int]) -> String {
+        let sum = ratings.reduce(0, +)
+        let average = Double(sum) / Double(ratings.count)
+      
+        let roundedAverage = round(average * 10) / 10.0
+        
+        let averageString = String(format: "%.1f", roundedAverage)
+        
+        return averageString
     }
     
     func updateStarImages(for ratingString: String) {
@@ -158,7 +178,6 @@ class ItemDetailVC: BaseVC {
                 ProductDetailAPI(id: self.item.id ?? 0).execute(success: { [weak self] response in
                     if let item = response.product {
                         self?.item = item
-                        self?.setupReview()
                     }
                 }, failure: { error in
                     print(error)
